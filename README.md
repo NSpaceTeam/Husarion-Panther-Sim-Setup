@@ -103,7 +103,8 @@ Follow these commands in your terminal.
     ```bash
     panther_connect
     ```
-10. **Create Helper function in Docker container**
+10. **Create Helper function in docker container:**
+    this function will make it easier to start the simulation
     ```bash
     echo 'alias run_sim="ros2 launch husarion_ugv_gazebo simulation.launch.py"' >> ~/.bashrc
     ```
@@ -125,7 +126,7 @@ After completing the setup:
     *   Start the `my_panther_sim` container if it exists but is stopped, and then attach to it.
     *   Inform you if the container doesn't exist (meaning you need to run the `docker run...` command from step 6 again).
 3. **Run gazeboo simulation**
-   in new terminal type:
+   inside docker container:
    ```bash
    run_sim
    ```
