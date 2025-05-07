@@ -64,6 +64,7 @@ Follow these commands in your terminal.
     cat << 'EOF' >> ~/.bashrc
 
     panther_connect() {
+        xhost +local:root
         local container_name="my_panther_sim" # <--- CHANGE THIS if your container name is different
         local exec_target_name="my_panther_sim" # <--- CHANGE THIS if exec target is different from start target (usually the same)
 
