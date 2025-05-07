@@ -1,4 +1,3 @@
-Okay, here's the README.md content. I've organized the commands logically and added explanations.
 
 # Panther Gazebo Simulation with Docker
 
