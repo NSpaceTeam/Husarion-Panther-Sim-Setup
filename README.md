@@ -99,6 +99,14 @@ Follow these commands in your terminal.
     ```bash
     source ~/.bashrc
     ```
+9. **Run enviorment**
+    ```bash
+    panther_connect
+    ```
+10. **Create Helper function in Docker container**
+    ```bash
+    echo 'alias run_sim="ros2 launch husarion_ugv_gazebo simulation.launch.py"' >> ~/.bashrc
+    ```
 
 ## Usage
 
@@ -116,6 +124,11 @@ After completing the setup:
     *   Attach to the already running `my_panther_sim` container.
     *   Start the `my_panther_sim` container if it exists but is stopped, and then attach to it.
     *   Inform you if the container doesn't exist (meaning you need to run the `docker run...` command from step 6 again).
+3. **Run gazeboo simulation**
+   in new terminal type:
+   ```bash
+   run_sim
+   ```
 
 Once inside the container (your terminal prompt will change), you can launch Gazebo, RViz, and other ROS 2 tools as per the Panther documentation. For example:
 ```bash
