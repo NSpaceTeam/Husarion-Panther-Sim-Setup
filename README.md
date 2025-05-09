@@ -91,6 +91,7 @@ Follow these commands in your terminal.
         fi
     }
     EOF
+    && source ~/.bashrc
     ```
 
 8.  **Apply Bashrc Changes:**
@@ -105,7 +106,7 @@ Follow these commands in your terminal.
 10. **Create Helper function in docker container:**
     this function will make it easier to start the simulation
     ```bash
-    echo 'alias run_sim="ros2 launch husarion_ugv_gazebo simulation.launch.py"' >> ~/.bashrc
+    echo 'alias run_sim="ros2 launch husarion_ugv_gazebo simulation.launch.py"' >> ~/.bashrc && source ~/.bashrc
     ```
 > [!IMPORTANT]
 >**DO NOT run**  ``` apt upgrade``` it will **BREAK** simulation
