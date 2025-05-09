@@ -127,6 +127,11 @@ Follow these commands in your terminal.
     ```bash
     apt install build-essential -y
     ```
+15. **optional: install nano and gedit**
+    ```bash
+    apt install nano -y && apt install gedit -y
+    ```
+
 ## Usage
 
 After completing the setup:
