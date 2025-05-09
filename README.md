@@ -108,7 +108,7 @@ Follow these commands in your terminal.
     echo 'alias run_sim="ros2 launch husarion_ugv_gazebo simulation.launch.py"' >> ~/.bashrc
     ```
 > [!IMPORTANT]
->**DO NOT run**  ```bash apt upgrade``` it will **BREAK** simulation
+>**DO NOT run**  ``` apt upgrade``` it will **BREAK** simulation
 11. **run apt update**
     ```bash
     apt update
