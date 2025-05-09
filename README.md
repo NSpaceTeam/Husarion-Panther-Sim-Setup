@@ -121,9 +121,9 @@ Follow these commands in your terminal.
      ```
 
 14. **install  build-essentials**
-```bash
- apt install build-essential
-```
+    ```bash
+    apt install build-essential
+    ```
 ## Usage
 
 After completing the setup:
