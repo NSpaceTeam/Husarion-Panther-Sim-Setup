@@ -119,12 +119,12 @@ Follow these commands in your terminal.
     ```
 13. **install Git**
      ```bash
-    apt install git
+    apt install git -y
      ```
 
 14. **install  build-essentials**
     ```bash
-    apt install build-essential
+    apt install build-essential -y
     ```
 ## Usage
 
