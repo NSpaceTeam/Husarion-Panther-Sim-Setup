@@ -107,7 +107,23 @@ Follow these commands in your terminal.
     ```bash
     echo 'alias run_sim="ros2 launch husarion_ugv_gazebo simulation.launch.py"' >> ~/.bashrc
     ```
+11. **run apt update**
+    ```bash
+    apt update
+    ```
+12. **install colcon**
+     ```bash
+    apt install python3-colcon-common-extensions -y
+    ```
+13. **install Git**
+     ```bash
+    apt install git
+     ```
 
+14. **install  build-essentials**
+```bash
+ apt install build-essential
+```
 ## Usage
 
 After completing the setup:
