@@ -131,7 +131,10 @@ Follow these commands in your terminal.
     ```bash
     apt install nano -y && apt install gedit -y
     ```
-
+    **ALL COMMANDS IN ONE**
+    ```bash
+     apt update && apt install -y python3-colcon-common-extensions git build-essential nano gedit python3-rosdep && rosdep init && rosdep update
+    ```
 ## Usage
 
 After completing the setup:
