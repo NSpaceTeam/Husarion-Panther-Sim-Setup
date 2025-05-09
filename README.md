@@ -107,6 +107,9 @@ Follow these commands in your terminal.
     ```bash
     echo 'alias run_sim="ros2 launch husarion_ugv_gazebo simulation.launch.py"' >> ~/.bashrc
     ```
+> [!WARNING]
+> This project is currently in **alpha** and should not be used in production environments.
+> Expect breaking changes and potential bugs.
 11. **run apt update**
     ```bash
     apt update
