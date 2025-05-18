@@ -1,6 +1,0 @@
-Invoking command in '/ros2_ws/build/btcpp_ros2_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros2_ws/src/behaviortree_ros2/btcpp_ros2_interfaces -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/btcpp_ros2_interfaces
-Invoked command in '/ros2_ws/build/btcpp_ros2_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros2_ws/src/behaviortree_ros2/btcpp_ros2_interfaces -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/btcpp_ros2_interfaces
-Invoking command in '/ros2_ws/build/btcpp_ros2_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/btcpp_ros2_interfaces -- -j4 -l4
-Invoked command in '/ros2_ws/build/btcpp_ros2_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/btcpp_ros2_interfaces -- -j4 -l4
-Invoking command in '/ros2_ws/build/btcpp_ros2_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/btcpp_ros2_interfaces
-Invoked command in '/ros2_ws/build/btcpp_ros2_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/btcpp_ros2_interfaces

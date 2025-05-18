@@ -1,5 +1,0 @@
-In file included from /ros2_ws/src/husarion_controllers/mecanum_drive_controller/include/mecanum_drive_controller/mecanum_drive_controller.hpp:50,
-                 from /ros2_ws/src/husarion_controllers/mecanum_drive_controller/src/mecanum_drive_controller.cpp:30:
-/ros2_ws/build/mecanum_drive_controller/include/mecanum_drive_controller_parameters.hpp:1:175: note: ‘#pragma message: #include "mecanum_drive_controller_parameters.hpp" is deprecated. Use #include <mecanum_drive_controller/mecanum_drive_controller_parameters.hpp> instead.’
-    1 | #pragma message("#include \"mecanum_drive_controller_parameters.hpp\" is deprecated. Use #include <mecanum_drive_controller/mecanum_drive_controller_parameters.hpp> instead.")
-      |                                                                                                                                                                               ^
