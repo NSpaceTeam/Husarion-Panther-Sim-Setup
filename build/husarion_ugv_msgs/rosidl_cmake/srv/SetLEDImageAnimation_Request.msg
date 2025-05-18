@@ -1,0 +1,4 @@
+husarion_ugv_msgs/LEDImageAnimation front
+husarion_ugv_msgs/LEDImageAnimation rear
+bool interrupting
+bool repeating

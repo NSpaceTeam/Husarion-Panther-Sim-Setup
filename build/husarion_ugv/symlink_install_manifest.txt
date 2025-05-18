@@ -1,0 +1,15 @@
+/ros2_ws/install/husarion_ugv/share/ament_index/resource_index/package_run_dependencies/husarion_ugv
+/ros2_ws/install/husarion_ugv/share/ament_index/resource_index/parent_prefix_path/husarion_ugv
+/ros2_ws/install/husarion_ugv/share/husarion_ugv/environment/ament_prefix_path.sh
+/ros2_ws/install/husarion_ugv/share/husarion_ugv/environment/ament_prefix_path.dsv
+/ros2_ws/install/husarion_ugv/share/husarion_ugv/environment/path.sh
+/ros2_ws/install/husarion_ugv/share/husarion_ugv/environment/path.dsv
+/ros2_ws/install/husarion_ugv/share/husarion_ugv/local_setup.bash
+/ros2_ws/install/husarion_ugv/share/husarion_ugv/local_setup.sh
+/ros2_ws/install/husarion_ugv/share/husarion_ugv/local_setup.zsh
+/ros2_ws/install/husarion_ugv/share/husarion_ugv/local_setup.dsv
+/ros2_ws/install/husarion_ugv/share/husarion_ugv/package.dsv
+/ros2_ws/install/husarion_ugv/share/ament_index/resource_index/packages/husarion_ugv
+/ros2_ws/install/husarion_ugv/share/husarion_ugv/cmake/husarion_ugvConfig.cmake
+/ros2_ws/install/husarion_ugv/share/husarion_ugv/cmake/husarion_ugvConfig-version.cmake
+/ros2_ws/install/husarion_ugv/share/husarion_ugv/package.xml

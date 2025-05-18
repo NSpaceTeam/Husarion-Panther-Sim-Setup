@@ -1,0 +1,1 @@
+/ros2_ws/src/husarion_ugv/husarion_ugv_msgs/msg/LEDImageAnimation.msg

@@ -1,0 +1,1 @@
+/ros2_ws/src/husarion_ugv/husarion_ugv_manager/include/husarion_ugv_manager/plugins/action/call_trigger_service_node.hpp
