@@ -1,1 +1,0 @@
-/ros2_ws/src/husarion_ugv/husarion_ugv_lights/test/unit/animation/test_charging_animation.cpp

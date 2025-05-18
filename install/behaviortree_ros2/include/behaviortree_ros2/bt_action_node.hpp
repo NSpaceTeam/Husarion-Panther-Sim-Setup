@@ -1,1 +1,0 @@
-/ros2_ws/src/behaviortree_ros2/behaviortree_ros2/include/behaviortree_ros2/bt_action_node.hpp
