@@ -1,0 +1,1 @@
+/ros2_ws/build/husarion_ugv_manager/include/husarion_ugv_manager/lights_manager_parameters.hpp

@@ -1,0 +1,133 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-e42f143d385cca29dfad.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "husarion_ugv_lights",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "animation_plugins::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-animation_plugins-Release-a8bacce1b894960cc366.json",
+					"name" : "animation_plugins",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "husarion_ugv_lights_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-husarion_ugv_lights_uninstall-Release-3be4a6ed77779ea1f5f1.json",
+					"name" : "husarion_ugv_lights_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lights_controller_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lights_controller_node-Release-a8f7eb8dbc66beba0591.json",
+					"name" : "lights_controller_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lights_controller_node_component::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lights_controller_node_component-Release-e6b3f8dbfb77b025f552.json",
+					"name" : "lights_controller_node_component",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lights_controller_parameters::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lights_controller_parameters-Release-fc6e57ad0117c93fb222.json",
+					"name" : "lights_controller_parameters",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lights_driver_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lights_driver_node-Release-0ce2a4359f27b2cb0da0.json",
+					"name" : "lights_driver_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lights_driver_node_component::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lights_driver_node_component-Release-0ce46ba3d288b5bf0259.json",
+					"name" : "lights_driver_node_component",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lights_driver_parameters::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lights_driver_parameters-Release-c84821d85b9ff333838b.json",
+					"name" : "lights_driver_parameters",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-5c0f0b1ef975026a3922.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/ros2_ws/build/husarion_ugv_lights",
+		"source" : "/ros2_ws/src/husarion_ugv/husarion_ugv_lights"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -2,10 +2,6 @@
 
 # Folders requested
 ###################
-build/
-install/
-log/
-logs/ # Often used as an alternative to "log"
 
 # Common build output directories
 #################################
