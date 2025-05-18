@@ -1,1 +1,0 @@
-/ros2_ws/build/husarion_ugv_msgs/rosidl_generator_cpp/husarion_ugv_msgs/msg/detail/led_image_animation__struct.hpp

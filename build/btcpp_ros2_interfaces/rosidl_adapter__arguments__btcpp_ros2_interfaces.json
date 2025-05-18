@@ -1,8 +1,0 @@
-{
-  "package_name": "btcpp_ros2_interfaces",
-  "non_idl_tuples": [
-    "/ros2_ws/src/behaviortree_ros2/btcpp_ros2_interfaces:msgs/NodeStatus.msg",
-    "/ros2_ws/src/behaviortree_ros2/btcpp_ros2_interfaces:action/ExecuteTree.action",
-    "/ros2_ws/src/behaviortree_ros2/btcpp_ros2_interfaces:action/Sleep.action"
-  ]
-}

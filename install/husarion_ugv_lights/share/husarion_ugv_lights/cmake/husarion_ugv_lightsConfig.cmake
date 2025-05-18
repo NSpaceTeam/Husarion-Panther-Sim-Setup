@@ -1,1 +1,0 @@
-/ros2_ws/build/husarion_ugv_lights/ament_cmake_core/husarion_ugv_lightsConfig.cmake

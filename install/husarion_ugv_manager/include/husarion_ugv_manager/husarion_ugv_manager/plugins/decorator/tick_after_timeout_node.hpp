@@ -1,1 +1,0 @@
-/ros2_ws/src/husarion_ugv/husarion_ugv_manager/include/husarion_ugv_manager/plugins/decorator/tick_after_timeout_node.hpp

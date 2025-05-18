@@ -1,1 +1,0 @@
-/ros2_ws/build/btcpp_ros2_interfaces/rosidl_generator_py/btcpp_ros2_interfaces/action/_execute_tree_s.c

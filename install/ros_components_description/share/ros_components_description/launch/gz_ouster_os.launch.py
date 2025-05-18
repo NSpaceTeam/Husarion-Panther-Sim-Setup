@@ -1,1 +1,0 @@
-/ros2_ws/src/ros_components_description/launch/gz_ouster_os.launch.py
