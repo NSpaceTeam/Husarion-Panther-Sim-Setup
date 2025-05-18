@@ -1,2 +1,0 @@
-ament_prepend_unique_value IGN_GUI_PLUGIN_PATH "/ros2_ws/install/husarion_ugv_gazebo/lib"
-ament_prepend_unique_value IGN_GAZEBO_SYSTEM_PLUGIN_PATH= "/ros2_ws/install/husarion_ugv_gazebo/lib"
