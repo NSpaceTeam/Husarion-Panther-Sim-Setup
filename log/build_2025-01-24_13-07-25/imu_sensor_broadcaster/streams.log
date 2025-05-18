@@ -1,0 +1,87 @@
+[0.010s] Invoking command in '/ros2_ws/build/imu_sensor_broadcaster': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros2_ws/src/imu_sensor_broadcaster -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/imu_sensor_broadcaster
+[0.101s] -- The CXX compiler identification is GNU 11.4.0
+[0.112s] -- Detecting CXX compiler ABI info
+[0.227s] -- Detecting CXX compiler ABI info - done
+[0.239s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.239s] -- Detecting CXX compile features
+[0.240s] -- Detecting CXX compile features - done
+[0.245s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.467s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.636s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.704s] -- Found controller_interface: 2.47.0 (/opt/ros/humble/share/controller_interface/cmake)
+[0.808s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.833s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.856s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.905s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.974s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.214s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.233s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[3.378s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[3.783s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[3.788s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[3.818s] -- Found FastRTPS: /opt/ros/humble/include  
+[3.839s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[3.874s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[3.901s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.946s] -- Looking for C++ include pthread.h
+[4.328s] -- Looking for C++ include pthread.h - found
+[4.328s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.724s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[4.724s] -- Found Threads: TRUE  
+[5.790s] -- Found generate_parameter_library: 0.4.0 (/opt/ros/humble/share/generate_parameter_library/cmake)
+[5.806s] -- Found parameter_traits: 0.4.0 (/opt/ros/humble/share/parameter_traits/cmake)
+[5.902s] -- Found realtime_tools: 2.10.0 (/opt/ros/humble/share/realtime_tools/cmake)
+[7.372s] -- Configuring done
+[7.506s] -- Generating done
+[7.537s] -- Build files have been written to: /ros2_ws/build/imu_sensor_broadcaster
+[7.577s] Invoked command in '/ros2_ws/build/imu_sensor_broadcaster' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros2_ws/src/imu_sensor_broadcaster -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/imu_sensor_broadcaster
+[7.577s] Invoking command in '/ros2_ws/build/imu_sensor_broadcaster': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/imu_sensor_broadcaster -- -j4 -l4
+[7.838s] [ 25%] Running `/opt/ros/humble/bin/generate_parameter_library_cpp /ros2_ws/build/imu_sensor_broadcaster/include/imu_sensor_broadcaster/imu_sensor_broadcaster_parameters.hpp /ros2_ws/src/imu_sensor_broadcaster/src/imu_sensor_broadcaster_parameters.yaml `
+[8.822s] [ 50%] Creating deprecated header file /ros2_ws/build/imu_sensor_broadcaster/include/imu_sensor_broadcaster_parameters.hpp
+[9.033s] [ 50%] Built target imu_sensor_broadcaster_parameters
+[9.112s] [ 75%] Building CXX object CMakeFiles/imu_sensor_broadcaster.dir/src/imu_sensor_broadcaster.cpp.o
+[15.568s] In file included from /ros2_ws/src/imu_sensor_broadcaster/include/imu_sensor_broadcaster/imu_sensor_broadcaster.hpp:28,
+[15.568s]                  from /ros2_ws/src/imu_sensor_broadcaster/src/imu_sensor_broadcaster.cpp:19:
+[15.568s] /ros2_ws/build/imu_sensor_broadcaster/include/imu_sensor_broadcaster_parameters.hpp:1:169: note: ‘#pragma message: #include "imu_sensor_broadcaster_parameters.hpp" is deprecated. Use #include <imu_sensor_broadcaster/imu_sensor_broadcaster_parameters.hpp> instead.’
+[15.569s]     1 | #pragma message("#include \"imu_sensor_broadcaster_parameters.hpp\" is deprecated. Use #include <imu_sensor_broadcaster/imu_sensor_broadcaster_parameters.hpp> instead.")
+[15.569s]       |                                                                                                                                                                         ^
+[15.848s] In file included from /ros2_ws/src/imu_sensor_broadcaster/include/imu_sensor_broadcaster/imu_sensor_broadcaster.hpp:31,
+[15.848s]                  from /ros2_ws/src/imu_sensor_broadcaster/src/imu_sensor_broadcaster.cpp:19:
+[15.848s] /opt/ros/humble/include/realtime_tools/realtime_tools/realtime_publisher.h:22:103: note: ‘#pragma message: This header include is deprecated. Please update your code to use 'realtime_publisher.hpp' header.’
+[15.849s]    22 |   "This header include is deprecated. Please update your code to use 'realtime_publisher.hpp' header.")  //NOLINT
+[15.849s]       |                                                                                                       ^
+[26.787s] [100%] Linking CXX shared library libimu_sensor_broadcaster.so
+[27.204s] [100%] Built target imu_sensor_broadcaster
+[27.236s] Invoked command in '/ros2_ws/build/imu_sensor_broadcaster' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/imu_sensor_broadcaster -- -j4 -l4
+[27.237s] Invoking command in '/ros2_ws/build/imu_sensor_broadcaster': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/imu_sensor_broadcaster
+[27.253s] -- Install configuration: "Release"
+[27.254s] -- Execute custom install script
+[27.255s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/include/imu_sensor_broadcaster/imu_sensor_broadcaster_parameters.hpp
+[27.275s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster//imu_sensor_broadcaster.xml
+[27.292s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/include/imu_sensor_broadcaster/imu_sensor_broadcaster/imu_sensor_broadcaster.hpp
+[27.308s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/include/imu_sensor_broadcaster/imu_sensor_broadcaster/visibility_control.h
+[27.329s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/environment/library_path.sh
+[27.354s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/environment/library_path.dsv
+[27.378s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/ament_index/resource_index/package_run_dependencies/imu_sensor_broadcaster
+[27.404s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/ament_index/resource_index/parent_prefix_path/imu_sensor_broadcaster
+[27.424s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/environment/ament_prefix_path.sh
+[27.451s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/environment/ament_prefix_path.dsv
+[27.465s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/environment/path.sh
+[27.482s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/environment/path.dsv
+[27.495s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/local_setup.bash
+[27.508s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/local_setup.sh
+[27.548s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/local_setup.zsh
+[27.572s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/local_setup.dsv
+[27.611s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/package.dsv
+[27.634s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/ament_index/resource_index/packages/imu_sensor_broadcaster
+[27.651s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/ament_index/resource_index/controller_interface__pluginlib__plugin/imu_sensor_broadcaster
+[27.664s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/cmake/ament_cmake_export_dependencies-extras.cmake
+[27.694s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/cmake/ament_cmake_export_targets-extras.cmake
+[27.723s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/cmake/imu_sensor_broadcasterConfig.cmake
+[27.756s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/cmake/imu_sensor_broadcasterConfig-version.cmake
+[27.775s] -- Symlinking: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/package.xml
+[27.796s] -- Installing: /ros2_ws/install/imu_sensor_broadcaster/lib/libimu_sensor_broadcaster.so
+[27.796s] -- Set runtime path of "/ros2_ws/install/imu_sensor_broadcaster/lib/libimu_sensor_broadcaster.so" to ""
+[27.796s] -- Installing: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/cmake/export_imu_sensor_broadcasterExport.cmake
+[27.796s] -- Installing: /ros2_ws/install/imu_sensor_broadcaster/share/imu_sensor_broadcaster/cmake/export_imu_sensor_broadcasterExport-release.cmake
+[27.796s] Invoked command in '/ros2_ws/build/imu_sensor_broadcaster' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/imu_sensor_broadcaster

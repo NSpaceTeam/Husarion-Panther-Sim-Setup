@@ -1,0 +1,10 @@
+In file included from /ros2_ws/src/husarion_ugv/husarion_ugv_lights/include/husarion_ugv_lights/lights_controller_node.hpp:30,
+                 from /ros2_ws/src/husarion_ugv/husarion_ugv_lights/src/lights_controller_node.cpp:15:
+/ros2_ws/build/husarion_ugv_lights/include/lights_controller_parameters.hpp:1:156: note: ‘#pragma message: #include "lights_controller_parameters.hpp" is deprecated. Use #include <husarion_ugv_lights/lights_controller_parameters.hpp> instead.’
+    1 | #pragma message("#include \"lights_controller_parameters.hpp\" is deprecated. Use #include <husarion_ugv_lights/lights_controller_parameters.hpp> instead.")
+      |                                                                                                                                                            ^
+In file included from /ros2_ws/src/husarion_ugv/husarion_ugv_lights/include/husarion_ugv_lights/lights_driver_node.hpp:29,
+                 from /ros2_ws/src/husarion_ugv/husarion_ugv_lights/src/lights_driver_node.cpp:15:
+/ros2_ws/build/husarion_ugv_lights/include/lights_driver_parameters.hpp:1:148: note: ‘#pragma message: #include "lights_driver_parameters.hpp" is deprecated. Use #include <husarion_ugv_lights/lights_driver_parameters.hpp> instead.’
+    1 | #pragma message("#include \"lights_driver_parameters.hpp\" is deprecated. Use #include <husarion_ugv_lights/lights_driver_parameters.hpp> instead.")
+      |                                                                                                                                                    ^
