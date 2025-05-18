@@ -1,0 +1,94 @@
+# .gitignore
+
+# Folders requested
+###################
+build/
+install/
+log/
+logs/ # Often used as an alternative to "log"
+
+# Common build output directories
+#################################
+dist/
+out/
+target/ # Common for Java/Scala
+bin/    # Can be for binaries, sometimes build output
+
+# Log files (if not in a dedicated log folder)
+#############################################
+*.log
+*.log.* # For rotated logs like app.log.1, app.log.2
+
+# Operating System generated files
+##################################
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE and editor specific files
+###############################
+.vscode/
+.idea/
+*.project
+*.classpath
+*.cproject
+*.launch
+*.settings/
+*.tmproj
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+*~
+*.swp
+*.swo
+
+# Dependency directories (add as needed for your project type)
+############################################################
+node_modules/
+vendor/
+venv/
+.venv/
+env/
+.env/ # For Python virtual environments
+.tox/
+jspm_packages/
+bower_components/
+
+# Compiled files (examples, add specific ones for your language)
+###############################################################
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.pyc
+*.pyo
+*.pyd
+*.class
+*.jar
+*.war
+*.ear
+
+# Archives
+##########
+# Only ignore if they are build artifacts, not if they are part of the source
+# *.zip
+# *.tar.gz
+# *.rar
+
+# Sensitive information (NEVER commit secrets!)
+#############################################
+.env # Often contains API keys, database passwords
+*.env
+config.local.php
+secrets.yml
+credentials.*
+
+# Other temporary or local files
+################################
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json # If you prefer using yarn.lock or pnpm-lock.yaml exclusively
+# composer.lock # If you prefer not to commit it (though often recommended to commit)
