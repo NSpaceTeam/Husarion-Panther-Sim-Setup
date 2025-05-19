@@ -31,52 +31,40 @@ Step 1: Add panther_connect Bash Function
 This function helps you easily connect to (or start and connect to) your Panther simulation Docker container.
 
 Open your ~/.bashrc file with a text editor (e.g., nano ~/.bashrc or gedit ~/.bashrc) and add the following function to the end of the file:
+ ```bash
+    cat << 'EOF' >> ~/.bashrc
 
-cat << 'EOF' >> ~/.bashrc
+    panther_connect() {
+        xhost +local:root
+        local container_name="my_panther_sim" # <--- CHANGE THIS if your container name is different
+        local exec_target_name="my_panther_sim" # <--- CHANGE THIS if exec target is different from start target (usually the same)
 
-panther_connect() {
-    xhost +local:root # Allow local Docker container to access X server
-    local container_name="my_panther_sim" # <--- CHANGE THIS if your container name is different
-    local exec_target_name="my_panther_sim" # <--- CHANGE THIS if exec target is different from start target (usually the same)
-
-    # Check if the container is currently running
-    if [ -n "$(docker ps -q -f name="^${container_name}$")" ]; then
-        echo "Container '${exec_target_name}' is active. Attaching with exec..."
-        docker exec -it "${exec_target_name}" /bin/bash
-    else
-        # Check if the container exists (even if stopped)
-        if [ -n "$(docker ps -aq -f name="^${container_name}$")" ]; then
-            echo "Container '${container_name}' exists but is not active. Starting..."
-            if docker start "${container_name}"; then
-                echo "Container '${container_name}' started successfully."
-                echo "Attempting to attach now..."
-                docker exec -it "${exec_target_name}" /bin/bash
-            else
-                echo "Failed to start container '${container_name}'. Check Docker logs."
-            fi
+        # Check if the container is currently running
+        # docker ps -q filters for quiet (ID only) and -f name filters by exact name
+        if [ -n "$(docker ps -q -f name="^${container_name}$")" ]; then
+            echo "Container '${exec_target_name}' is active. Attaching with exec..."
+            docker exec -it "${exec_target_name}" /bin/bash
         else
-            echo "Container '${container_name}' does not exist. Please create or run it first."
-            echo "Example: Use the 'docker run...' command provided in the setup instructions."
+            # Check if the container exists (even if stopped)
+            # docker ps -aq filters for all (a) quiet (q) and -f name filters by exact name
+            if [ -n "$(docker ps -aq -f name="^${container_name}$")" ]; then
+                echo "Container '${container_name}' exists but is not active. Starting..."
+                if docker start "${container_name}"; then
+                    echo "Container '${container_name}' started successfully."
+                    echo "Attempting to attach now..."
+                    docker exec -it "${exec_target_name}" /bin/bash
+                else
+                    echo "Failed to start container '${container_name}'. Check Docker logs."
+                fi
+            else
+                echo "Container '${container_name}' does not exist. Please create or run it first."
+                echo "Example: Use the 'docker run...' command provided in the setup instructions."
+            fi
         fi
-    fi
-}
-EOF
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
-
-Then, source your .bashrc to make the function available in your current terminal session:
-
-source ~/.bashrc
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
+    }
+    EOF
+    && source ~/.bashrc
+```
 Step 2: Allow X Server Connections
 
 This command allows Docker containers running as root to connect to your host's X server for GUI applications (like Gazebo). The panther_connect function also runs this, but it's good to run it once initially.
