@@ -1,6 +1,4 @@
-Okay, here's the content formatted as a README.md file suitable for GitHub. You can copy and paste this directly into a file named README.md in your repository's root directory.
-
-# Panther Simulation with Docker Setup
+## Panther Simulation with Docker Setup
 
 This guide provides step-by-step instructions to set up and run the Husarion Panther UGV simulation in a Docker container using ROS 2 Humble.
 
