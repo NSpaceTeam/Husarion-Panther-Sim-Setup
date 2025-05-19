@@ -1,0 +1,20 @@
+In file included from /ros2_ws/src/husarion_ugv/husarion_ugv_manager/include/husarion_ugv_manager/lights_manager_node.hpp:29,
+                 from /ros2_ws/src/husarion_ugv/husarion_ugv_manager/src/lights_manager_node_main.cpp:15:
+/ros2_ws/build/husarion_ugv_manager/include/lights_manager_parameters.hpp:1:151: note: ‘#pragma message: #include "lights_manager_parameters.hpp" is deprecated. Use #include <husarion_ugv_manager/lights_manager_parameters.hpp> instead.’
+    1 | #pragma message("#include \"lights_manager_parameters.hpp\" is deprecated. Use #include <husarion_ugv_manager/lights_manager_parameters.hpp> instead.")
+      |                                                                                                                                                       ^
+In file included from /ros2_ws/src/husarion_ugv/husarion_ugv_manager/include/husarion_ugv_manager/lights_manager_node.hpp:29,
+                 from /ros2_ws/src/husarion_ugv/husarion_ugv_manager/src/lights_manager_node.cpp:15:
+/ros2_ws/build/husarion_ugv_manager/include/lights_manager_parameters.hpp:1:151: note: ‘#pragma message: #include "lights_manager_parameters.hpp" is deprecated. Use #include <husarion_ugv_manager/lights_manager_parameters.hpp> instead.’
+    1 | #pragma message("#include \"lights_manager_parameters.hpp\" is deprecated. Use #include <husarion_ugv_manager/lights_manager_parameters.hpp> instead.")
+      |                                                                                                                                                       ^
+In file included from /ros2_ws/src/husarion_ugv/husarion_ugv_manager/include/husarion_ugv_manager/safety_manager_node.hpp:32,
+                 from /ros2_ws/src/husarion_ugv/husarion_ugv_manager/src/safety_manager_node_main.cpp:15:
+/ros2_ws/build/husarion_ugv_manager/include/safety_manager_parameters.hpp:1:151: note: ‘#pragma message: #include "safety_manager_parameters.hpp" is deprecated. Use #include <husarion_ugv_manager/safety_manager_parameters.hpp> instead.’
+    1 | #pragma message("#include \"safety_manager_parameters.hpp\" is deprecated. Use #include <husarion_ugv_manager/safety_manager_parameters.hpp> instead.")
+      |                                                                                                                                                       ^
+In file included from /ros2_ws/src/husarion_ugv/husarion_ugv_manager/include/husarion_ugv_manager/safety_manager_node.hpp:32,
+                 from /ros2_ws/src/husarion_ugv/husarion_ugv_manager/src/safety_manager_node.cpp:15:
+/ros2_ws/build/husarion_ugv_manager/include/safety_manager_parameters.hpp:1:151: note: ‘#pragma message: #include "safety_manager_parameters.hpp" is deprecated. Use #include <husarion_ugv_manager/safety_manager_parameters.hpp> instead.’
+    1 | #pragma message("#include \"safety_manager_parameters.hpp\" is deprecated. Use #include <husarion_ugv_manager/safety_manager_parameters.hpp> instead.")
+      |                                                                                                                                                       ^

@@ -1,0 +1,176 @@
+[0.011s] Invoking command in '/ros2_ws/build/husarion_ugv_lights': AMENT_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/ros2_ws/install/husarion_ugv_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/ros2_ws/install/husarion_ugv_msgs:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/install/husarion_ugv_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ros2_ws/install/husarion_ugv_utils/local/lib/python3.10/dist-packages:/ros2_ws/install/husarion_ugv_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /ros2_ws/src/husarion_ugv/husarion_ugv_lights -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/husarion_ugv_lights
+[0.065s] -- The C compiler identification is GNU 11.4.0
+[0.117s] -- The CXX compiler identification is GNU 11.4.0
+[0.125s] -- Detecting C compiler ABI info
+[0.194s] -- Detecting C compiler ABI info - done
+[0.201s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.202s] -- Detecting C compile features
+[0.202s] -- Detecting C compile features - done
+[0.205s] -- Detecting CXX compiler ABI info
+[0.284s] -- Detecting CXX compiler ABI info - done
+[0.291s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.291s] -- Detecting CXX compile features
+[0.292s] -- Detecting CXX compile features - done
+[0.296s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.421s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.479s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.515s] -- Found ament_index_cpp: 1.4.0 (/opt/ros/humble/share/ament_index_cpp/cmake)
+[0.518s] -- Found diagnostic_updater: 4.0.0 (/opt/ros/humble/share/diagnostic_updater/cmake)
+[0.571s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.578s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.588s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.603s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.625s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.810s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.814s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.925s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.957s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.014s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.027s] -- Looking for pthread.h
+[1.101s] -- Looking for pthread.h - found
+[1.101s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.177s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.178s] -- Found Threads: TRUE  
+[1.323s] -- Found generate_parameter_library: 0.4.0 (/opt/ros/humble/share/generate_parameter_library/cmake)
+[1.326s] -- Found parameter_traits: 0.4.0 (/opt/ros/humble/share/parameter_traits/cmake)
+[1.357s] -- Found rclcpp_lifecycle: 16.0.9 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.399s] -- Found image_transport: 3.1.10 (/opt/ros/humble/share/image_transport/cmake)
+[1.583s] -- Found husarion_ugv_msgs: 2.1.2 (/ros2_ws/install/husarion_ugv_msgs/share/husarion_ugv_msgs/cmake)
+[1.624s] -- Found husarion_ugv_utils: 2.1.2 (/ros2_ws/install/husarion_ugv_utils/share/husarion_ugv_utils/cmake)
+[1.759s] -- Found rclcpp_components: 16.0.9 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.817s] -- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)
+[1.986s] -- Configuring done
+[2.038s] -- Generating done
+[2.050s] -- Build files have been written to: /ros2_ws/build/husarion_ugv_lights
+[2.060s] Invoked command in '/ros2_ws/build/husarion_ugv_lights' returned '0': AMENT_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/ros2_ws/install/husarion_ugv_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/ros2_ws/install/husarion_ugv_msgs:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/install/husarion_ugv_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ros2_ws/install/husarion_ugv_utils/local/lib/python3.10/dist-packages:/ros2_ws/install/husarion_ugv_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /ros2_ws/src/husarion_ugv/husarion_ugv_lights -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/husarion_ugv_lights
+[2.061s] Invoking command in '/ros2_ws/build/husarion_ugv_lights': AMENT_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/ros2_ws/install/husarion_ugv_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/ros2_ws/install/husarion_ugv_msgs:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/install/husarion_ugv_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ros2_ws/install/husarion_ugv_utils/local/lib/python3.10/dist-packages:/ros2_ws/install/husarion_ugv_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /ros2_ws/build/husarion_ugv_lights -- -j4 -l4
+[2.124s] [ 10%] Building CXX object CMakeFiles/animation_plugins.dir/src/animation/image_animation.cpp.o
+[2.124s] [ 10%] Running `/opt/ros/humble/bin/generate_parameter_library_cpp /ros2_ws/build/husarion_ugv_lights/include/husarion_ugv_lights/lights_driver_parameters.hpp /ros2_ws/src/husarion_ugv/husarion_ugv_lights/src/lights_driver_parameters.yaml `
+[2.413s] [ 15%] Creating deprecated header file /ros2_ws/build/husarion_ugv_lights/include/lights_driver_parameters.hpp
+[2.471s] [ 15%] Built target lights_driver_parameters
+[2.485s] [ 20%] Building CXX object CMakeFiles/animation_plugins.dir/src/animation/charging_animation.cpp.o
+[2.564s] [ 25%] Building CXX object CMakeFiles/lights_driver_node.dir/rclcpp_components/node_main_lights_driver_node.cpp.o
+[4.623s] [ 30%] Running `/opt/ros/humble/bin/generate_parameter_library_cpp /ros2_ws/build/husarion_ugv_lights/include/husarion_ugv_lights/lights_controller_parameters.hpp /ros2_ws/src/husarion_ugv/husarion_ugv_lights/src/lights_controller_parameters.yaml `
+[5.069s] [ 35%] Creating deprecated header file /ros2_ws/build/husarion_ugv_lights/include/lights_controller_parameters.hpp
+[5.131s] [ 35%] Built target lights_controller_parameters
+[5.247s] [ 40%] Building CXX object CMakeFiles/lights_controller_node.dir/rclcpp_components/node_main_lights_controller_node.cpp.o
+[9.328s] [ 45%] Linking CXX executable lights_driver_node
+[9.521s] [ 45%] Built target lights_driver_node
+[10.899s] [ 50%] Linking CXX executable lights_controller_node
+[11.035s] [ 50%] Built target lights_controller_node
+[12.855s] [ 55%] Linking CXX shared library libanimation_plugins.so
+[13.004s] [ 55%] Built target animation_plugins
+[13.027s] [ 60%] Building CXX object CMakeFiles/lights_controller_node_component.dir/src/lights_controller_node.cpp.o
+[15.393s] In file included from /ros2_ws/src/husarion_ugv/husarion_ugv_lights/include/husarion_ugv_lights/lights_controller_node.hpp:30,
+[15.393s]                  from /ros2_ws/src/husarion_ugv/husarion_ugv_lights/src/lights_controller_node.cpp:15:
+[15.393s] /ros2_ws/build/husarion_ugv_lights/include/lights_controller_parameters.hpp:1:156: note: ‘#pragma message: #include "lights_controller_parameters.hpp" is deprecated. Use #include <husarion_ugv_lights/lights_controller_parameters.hpp> instead.’
+[15.393s]     1 | #pragma message("#include \"lights_controller_parameters.hpp\" is deprecated. Use #include <husarion_ugv_lights/lights_controller_parameters.hpp> instead.")
+[15.394s]       |                                                                                                                                                            ^
+[16.046s] [ 65%] Building CXX object CMakeFiles/lights_controller_node_component.dir/src/led_components/led_panel.cpp.o
+[16.795s] [ 70%] Building CXX object CMakeFiles/lights_controller_node_component.dir/src/led_components/led_segment.cpp.o
+[18.844s] [ 75%] Building CXX object CMakeFiles/lights_controller_node_component.dir/src/led_components/segment_converter.cpp.o
+[28.281s] [ 80%] Building CXX object CMakeFiles/lights_controller_node_component.dir/src/led_components/led_animations_queue.cpp.o
+[30.967s] [ 85%] Linking CXX shared library liblights_controller_node_component.so
+[31.127s] [ 85%] Built target lights_controller_node_component
+[31.148s] [ 90%] Building CXX object CMakeFiles/lights_driver_node_component.dir/src/lights_driver_node.cpp.o
+[33.405s] In file included from /ros2_ws/src/husarion_ugv/husarion_ugv_lights/include/husarion_ugv_lights/lights_driver_node.hpp:29,
+[33.405s]                  from /ros2_ws/src/husarion_ugv/husarion_ugv_lights/src/lights_driver_node.cpp:15:
+[33.406s] /ros2_ws/build/husarion_ugv_lights/include/lights_driver_parameters.hpp:1:148: note: ‘#pragma message: #include "lights_driver_parameters.hpp" is deprecated. Use #include <husarion_ugv_lights/lights_driver_parameters.hpp> instead.’
+[33.406s]     1 | #pragma message("#include \"lights_driver_parameters.hpp\" is deprecated. Use #include <husarion_ugv_lights/lights_driver_parameters.hpp> instead.")
+[33.406s]       |                                                                                                                                                    ^
+[50.812s] [ 95%] Building CXX object CMakeFiles/lights_driver_node_component.dir/src/apa102.cpp.o
+[51.496s] [100%] Linking CXX shared library liblights_driver_node_component.so
+[51.653s] [100%] Built target lights_driver_node_component
+[51.666s] Invoked command in '/ros2_ws/build/husarion_ugv_lights' returned '0': AMENT_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/ros2_ws/install/husarion_ugv_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/ros2_ws/install/husarion_ugv_msgs:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/install/husarion_ugv_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ros2_ws/install/husarion_ugv_utils/local/lib/python3.10/dist-packages:/ros2_ws/install/husarion_ugv_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /ros2_ws/build/husarion_ugv_lights -- -j4 -l4
+[51.669s] Invoking command in '/ros2_ws/build/husarion_ugv_lights': AMENT_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/ros2_ws/install/husarion_ugv_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/ros2_ws/install/husarion_ugv_msgs:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/install/husarion_ugv_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ros2_ws/install/husarion_ugv_utils/local/lib/python3.10/dist-packages:/ros2_ws/install/husarion_ugv_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /ros2_ws/build/husarion_ugv_lights
+[51.682s] -- Install configuration: "Release"
+[51.683s] -- Execute custom install script
+[51.684s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/include/husarion_ugv_lights/lights_controller_parameters.hpp
+[51.699s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/include/husarion_ugv_lights/lights_driver_parameters.hpp
+[51.714s] -- Up-to-date symlink: /ros2_ws/install/husarion_ugv_lights/include/husarion_ugv_lights/lights_controller_parameters.hpp
+[51.714s] -- Up-to-date symlink: /ros2_ws/install/husarion_ugv_lights/include/husarion_ugv_lights/lights_driver_parameters.hpp
+[51.714s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/lib/husarion_ugv_lights/lights_driver_node
+[51.728s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/lib/husarion_ugv_lights/lights_controller_node
+[51.743s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/lynx/battery_critical.png
+[51.755s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/lynx/battery_low.png
+[51.764s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/lynx/strip01_purple.png
+[51.773s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/lynx/strip01_red.png
+[51.781s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/lynx/triangle01_blue.png
+[51.790s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/lynx/triangle01_cyan.png
+[51.799s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/lynx/triangle01_green.png
+[51.808s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/lynx/triangle01_orange.png
+[51.817s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/lynx/triangle01_purple.png
+[51.826s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/lynx/triangle01_red.png
+[51.835s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/lynx/triangle01_yellow.png
+[51.844s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/panther/battery_critical.png
+[51.856s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/panther/battery_low.png
+[51.869s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/panther/strip01_purple.png
+[51.880s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/panther/strip01_red.png
+[51.893s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/panther/triangle01_blue.png
+[51.907s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/panther/triangle01_cyan.png
+[51.920s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/panther/triangle01_green.png
+[51.934s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/panther/triangle01_orange.png
+[51.943s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/panther/triangle01_purple.png
+[51.951s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/panther/triangle01_red.png
+[51.960s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/animations/panther/triangle01_yellow.png
+[51.974s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/config/lynx_animations.yaml
+[51.987s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/config/lynx_driver.yaml
+[52.000s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/config/panther_animations.yaml
+[52.011s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/config/panther_driver.yaml
+[52.020s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/config/user_animations.yaml
+[52.030s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/launch/lights.launch.py
+[52.039s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/test/files/animation.png
+[52.049s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/test/integration/husarion_ugv_lights.test.py
+[52.059s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/test/unit/animation/test_animation.cpp
+[52.068s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/test/unit/animation/test_charging_animation.cpp
+[52.077s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/test/unit/animation/test_image_animation.cpp
+[52.086s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/test/unit/led_components/test_led_animation.cpp
+[52.098s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/test/unit/led_components/test_led_animations_queue.cpp
+[52.107s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/test/unit/led_components/test_led_panel.cpp
+[52.116s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/test/unit/led_components/test_led_segment.cpp
+[52.125s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/test/unit/led_components/test_segment_converter.cpp
+[52.134s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/test/unit/test_apa102.cpp
+[52.143s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/test/unit/test_lights_controller_node.cpp
+[52.152s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/test/unit/test_lights_driver_node.cpp
+[52.161s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/include/husarion_ugv_lights/husarion_ugv_lights/animation/animation.hpp
+[52.170s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/include/husarion_ugv_lights/husarion_ugv_lights/animation/charging_animation.hpp
+[52.180s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/include/husarion_ugv_lights/husarion_ugv_lights/animation/image_animation.hpp
+[52.189s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/include/husarion_ugv_lights/husarion_ugv_lights/apa102.hpp
+[52.198s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/include/husarion_ugv_lights/husarion_ugv_lights/led_components/led_animations_queue.hpp
+[52.209s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/include/husarion_ugv_lights/husarion_ugv_lights/led_components/led_panel.hpp
+[52.223s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/include/husarion_ugv_lights/husarion_ugv_lights/led_components/led_segment.hpp
+[52.233s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/include/husarion_ugv_lights/husarion_ugv_lights/led_components/segment_converter.hpp
+[52.243s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/include/husarion_ugv_lights/husarion_ugv_lights/lights_controller_node.hpp
+[52.252s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/include/husarion_ugv_lights/husarion_ugv_lights/lights_driver_node.hpp
+[52.262s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/environment/library_path.sh
+[52.271s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/environment/library_path.dsv
+[52.280s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights//plugins.xml
+[52.289s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/ament_index/resource_index/package_run_dependencies/husarion_ugv_lights
+[52.299s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/ament_index/resource_index/parent_prefix_path/husarion_ugv_lights
+[52.308s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/environment/ament_prefix_path.sh
+[52.317s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/environment/ament_prefix_path.dsv
+[52.326s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/environment/path.sh
+[52.335s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/environment/path.dsv
+[52.344s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/local_setup.bash
+[52.353s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/local_setup.sh
+[52.361s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/local_setup.zsh
+[52.370s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/local_setup.dsv
+[52.379s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/package.dsv
+[52.388s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/ament_index/resource_index/packages/husarion_ugv_lights
+[52.397s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/ament_index/resource_index/husarion_ugv_lights__pluginlib__plugin/husarion_ugv_lights
+[52.406s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/ament_index/resource_index/rclcpp_components/husarion_ugv_lights
+[52.416s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/cmake/ament_cmake_export_dependencies-extras.cmake
+[52.425s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/cmake/ament_cmake_export_include_directories-extras.cmake
+[52.434s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/cmake/ament_cmake_export_targets-extras.cmake
+[52.444s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/cmake/husarion_ugv_lightsConfig.cmake
+[52.454s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/cmake/husarion_ugv_lightsConfig-version.cmake
+[52.464s] -- Symlinking: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/package.xml
+[52.473s] -- Installing: /ros2_ws/install/husarion_ugv_lights/lib/libanimation_plugins.so
+[52.475s] -- Set runtime path of "/ros2_ws/install/husarion_ugv_lights/lib/libanimation_plugins.so" to ""
+[52.475s] -- Installing: /ros2_ws/install/husarion_ugv_lights/lib/liblights_driver_node_component.so
+[52.479s] -- Set runtime path of "/ros2_ws/install/husarion_ugv_lights/lib/liblights_driver_node_component.so" to ""
+[52.479s] -- Installing: /ros2_ws/install/husarion_ugv_lights/lib/liblights_controller_node_component.so
+[52.482s] -- Set runtime path of "/ros2_ws/install/husarion_ugv_lights/lib/liblights_controller_node_component.so" to ""
+[52.482s] -- Installing: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/cmake/export_husarion_ugv_lightsExport.cmake
+[52.483s] -- Installing: /ros2_ws/install/husarion_ugv_lights/share/husarion_ugv_lights/cmake/export_husarion_ugv_lightsExport-release.cmake
+[52.485s] Invoked command in '/ros2_ws/build/husarion_ugv_lights' returned '0': AMENT_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/ros2_ws/install/husarion_ugv_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/ros2_ws/install/husarion_ugv_msgs:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/install/husarion_ugv_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/ros2_ws/install/husarion_ugv_utils/local/lib/python3.10/dist-packages:/ros2_ws/install/husarion_ugv_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /ros2_ws/build/husarion_ugv_lights

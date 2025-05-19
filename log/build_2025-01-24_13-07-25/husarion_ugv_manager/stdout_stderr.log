@@ -1,0 +1,166 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_index_cpp: 1.4.0 (/opt/ros/humble/share/ament_index_cpp/cmake)
+-- Found behaviortree_cpp: 4.6.2 (/opt/ros/humble/share/behaviortree_cpp/cmake)
+-- Found behaviortree_ros2: 0.2.0 (/ros2_ws/install/behaviortree_ros2/share/behaviortree_ros2/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found husarion_ugv_msgs: 2.1.2 (/ros2_ws/install/husarion_ugv_msgs/share/husarion_ugv_msgs/cmake)
+-- Found husarion_ugv_utils: 2.1.2 (/ros2_ws/install/husarion_ugv_utils/share/husarion_ugv_utils/cmake)
+-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)
+-- Found tf2_geometry_msgs: 0.25.11 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /ros2_ws/build/husarion_ugv_manager
+[  3%] Building CXX object CMakeFiles/call_set_bool_service_bt_node.dir/src/plugins/action/call_set_bool_service_node.cpp.o
+[  7%] Building CXX object CMakeFiles/signal_shutdown_bt_node.dir/src/plugins/action/signal_shutdown_node.cpp.o
+[ 10%] Building CXX object CMakeFiles/call_set_led_animation_service_bt_node.dir/src/plugins/action/call_set_led_animation_service_node.cpp.o
+[ 14%] Building CXX object CMakeFiles/call_trigger_service_bt_node.dir/src/plugins/action/call_trigger_service_node.cpp.o
+[ 17%] Linking CXX shared library libsignal_shutdown_bt_node.so
+[ 17%] Built target signal_shutdown_bt_node
+[ 21%] Linking CXX shared library libcall_set_bool_service_bt_node.so
+[ 21%] Built target call_set_bool_service_bt_node
+[ 25%] Linking CXX shared library libcall_set_led_animation_service_bt_node.so
+[ 25%] Built target call_set_led_animation_service_bt_node
+[ 28%] Linking CXX shared library libcall_trigger_service_bt_node.so
+[ 28%] Built target call_trigger_service_bt_node
+[ 32%] Building CXX object CMakeFiles/check_bool_msg_bt_node.dir/src/plugins/condition/check_bool_msg.cpp.o
+[ 35%] Building CXX object CMakeFiles/check_joy_msg_bt_node.dir/src/plugins/condition/check_joy_msg.cpp.o
+[ 39%] Building CXX object CMakeFiles/shutdown_hosts_from_file_bt_node.dir/src/plugins/action/shutdown_hosts_from_file_node.cpp.o
+[ 42%] Building CXX object CMakeFiles/shutdown_single_host_bt_node.dir/src/plugins/action/shutdown_single_host_node.cpp.o
+[ 46%] Linking CXX shared library libcheck_bool_msg_bt_node.so
+[ 46%] Built target check_bool_msg_bt_node
+[ 50%] Linking CXX shared library libshutdown_single_host_bt_node.so
+[ 53%] Linking CXX shared library libshutdown_hosts_from_file_bt_node.so
+[ 53%] Built target shutdown_single_host_bt_node
+[ 53%] Built target shutdown_hosts_from_file_bt_node
+[ 57%] Linking CXX shared library libcheck_joy_msg_bt_node.so
+[ 57%] Built target check_joy_msg_bt_node
+[ 60%] Running `/opt/ros/humble/bin/generate_parameter_library_cpp /ros2_ws/build/husarion_ugv_manager/include/husarion_ugv_manager/safety_manager_parameters.hpp /ros2_ws/src/husarion_ugv/husarion_ugv_manager/src/safety_manager_parameters.yaml `
+[ 64%] Building CXX object CMakeFiles/tick_after_timeout_bt_node.dir/src/plugins/decorator/tick_after_timeout_node.cpp.o
+[ 67%] Running `/opt/ros/humble/bin/generate_parameter_library_cpp /ros2_ws/build/husarion_ugv_manager/include/husarion_ugv_manager/lights_manager_parameters.hpp /ros2_ws/src/husarion_ugv/husarion_ugv_manager/src/lights_manager_parameters.yaml `
+[ 71%] Creating deprecated header file /ros2_ws/build/husarion_ugv_manager/include/lights_manager_parameters.hpp
+[ 71%] Built target lights_manager_parameters
+[ 75%] Creating deprecated header file /ros2_ws/build/husarion_ugv_manager/include/safety_manager_parameters.hpp
+[ 75%] Built target safety_manager_parameters
+[ 78%] Linking CXX shared library libtick_after_timeout_bt_node.so
+[ 78%] Built target tick_after_timeout_bt_node
+[ 82%] Building CXX object CMakeFiles/safety_manager_node.dir/src/safety_manager_node_main.cpp.o
+[ 85%] Building CXX object CMakeFiles/lights_manager_node.dir/src/lights_manager_node_main.cpp.o
+[ 89%] Building CXX object CMakeFiles/safety_manager_node.dir/src/safety_manager_node.cpp.o
+[ 92%] Building CXX object CMakeFiles/lights_manager_node.dir/src/lights_manager_node.cpp.o
+In file included from /ros2_ws/src/husarion_ugv/husarion_ugv_manager/include/husarion_ugv_manager/lights_manager_node.hpp:29,
+                 from /ros2_ws/src/husarion_ugv/husarion_ugv_manager/src/lights_manager_node_main.cpp:15:
+/ros2_ws/build/husarion_ugv_manager/include/lights_manager_parameters.hpp:1:151: note: ‘#pragma message: #include "lights_manager_parameters.hpp" is deprecated. Use #include <husarion_ugv_manager/lights_manager_parameters.hpp> instead.’
+    1 | #pragma message("#include \"lights_manager_parameters.hpp\" is deprecated. Use #include <husarion_ugv_manager/lights_manager_parameters.hpp> instead.")
+      |                                                                                                                                                       ^
+In file included from /ros2_ws/src/husarion_ugv/husarion_ugv_manager/include/husarion_ugv_manager/lights_manager_node.hpp:29,
+                 from /ros2_ws/src/husarion_ugv/husarion_ugv_manager/src/lights_manager_node.cpp:15:
+/ros2_ws/build/husarion_ugv_manager/include/lights_manager_parameters.hpp:1:151: note: ‘#pragma message: #include "lights_manager_parameters.hpp" is deprecated. Use #include <husarion_ugv_manager/lights_manager_parameters.hpp> instead.’
+    1 | #pragma message("#include \"lights_manager_parameters.hpp\" is deprecated. Use #include <husarion_ugv_manager/lights_manager_parameters.hpp> instead.")
+      |                                                                                                                                                       ^
+In file included from /ros2_ws/src/husarion_ugv/husarion_ugv_manager/include/husarion_ugv_manager/safety_manager_node.hpp:32,
+                 from /ros2_ws/src/husarion_ugv/husarion_ugv_manager/src/safety_manager_node_main.cpp:15:
+/ros2_ws/build/husarion_ugv_manager/include/safety_manager_parameters.hpp:1:151: note: ‘#pragma message: #include "safety_manager_parameters.hpp" is deprecated. Use #include <husarion_ugv_manager/safety_manager_parameters.hpp> instead.’
+    1 | #pragma message("#include \"safety_manager_parameters.hpp\" is deprecated. Use #include <husarion_ugv_manager/safety_manager_parameters.hpp> instead.")
+      |                                                                                                                                                       ^
+In file included from /ros2_ws/src/husarion_ugv/husarion_ugv_manager/include/husarion_ugv_manager/safety_manager_node.hpp:32,
+                 from /ros2_ws/src/husarion_ugv/husarion_ugv_manager/src/safety_manager_node.cpp:15:
+/ros2_ws/build/husarion_ugv_manager/include/safety_manager_parameters.hpp:1:151: note: ‘#pragma message: #include "safety_manager_parameters.hpp" is deprecated. Use #include <husarion_ugv_manager/safety_manager_parameters.hpp> instead.’
+    1 | #pragma message("#include \"safety_manager_parameters.hpp\" is deprecated. Use #include <husarion_ugv_manager/safety_manager_parameters.hpp> instead.")
+      |                                                                                                                                                       ^
+[ 96%] Linking CXX executable lights_manager_node
+[ 96%] Built target lights_manager_node
+[100%] Linking CXX executable safety_manager_node
+[100%] Built target safety_manager_node
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/lights_manager_parameters.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/safety_manager_parameters.hpp
+-- Up-to-date symlink: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/lights_manager_parameters.hpp
+-- Up-to-date symlink: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/safety_manager_parameters.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/lib/libcall_set_bool_service_bt_node.so
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/lib/libcall_trigger_service_bt_node.so
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/lib/libcall_set_led_animation_service_bt_node.so
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/lib/libsignal_shutdown_bt_node.so
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/lib/libshutdown_single_host_bt_node.so
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/lib/libshutdown_hosts_from_file_bt_node.so
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/lib/libcheck_bool_msg_bt_node.so
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/lib/libcheck_joy_msg_bt_node.so
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/lib/libtick_after_timeout_bt_node.so
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/lib/husarion_ugv_manager/safety_manager_node
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/lib/husarion_ugv_manager/lights_manager_node
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/behavior_trees/LightsBT.btproj
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/behavior_trees/SafetyBT.btproj
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/behavior_trees/lights.xml
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/behavior_trees/safety.xml
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/behavior_trees/shutdown.xml
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/config/lights_manager.yaml
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/config/safety_manager.yaml
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/config/shutdown_hosts.yaml
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/launch/manager.launch.py
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/husarion_ugv_manager/behavior_tree_manager.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/husarion_ugv_manager/behavior_tree_utils.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/husarion_ugv_manager/lights_manager_node.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/husarion_ugv_manager/plugins/action/call_set_bool_service_node.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/husarion_ugv_manager/plugins/action/call_set_led_animation_service_node.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/husarion_ugv_manager/plugins/action/call_trigger_service_node.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/husarion_ugv_manager/plugins/action/shutdown_hosts_from_file_node.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/husarion_ugv_manager/plugins/action/shutdown_single_host_node.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/husarion_ugv_manager/plugins/action/signal_shutdown_node.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/husarion_ugv_manager/plugins/condition/check_bool_msg.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/husarion_ugv_manager/plugins/condition/check_joy_msg.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/husarion_ugv_manager/plugins/decorator/tick_after_timeout_node.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/husarion_ugv_manager/plugins/shutdown_host.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/husarion_ugv_manager/plugins/shutdown_hosts_node.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/husarion_ugv_manager/safety_manager_node.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/husarion_ugv_manager/test/utils/behavior_tree_test_utils.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/include/husarion_ugv_manager/husarion_ugv_manager/test/utils/plugin_test_utils.hpp
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/ament_index/resource_index/package_run_dependencies/husarion_ugv_manager
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/ament_index/resource_index/parent_prefix_path/husarion_ugv_manager
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/environment/ament_prefix_path.sh
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/environment/ament_prefix_path.dsv
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/environment/path.sh
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/environment/path.dsv
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/local_setup.bash
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/local_setup.sh
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/local_setup.zsh
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/local_setup.dsv
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/package.dsv
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/ament_index/resource_index/packages/husarion_ugv_manager
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/cmake/husarion_ugv_managerConfig.cmake
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/cmake/husarion_ugv_managerConfig-version.cmake
+-- Symlinking: /ros2_ws/install/husarion_ugv_manager/share/husarion_ugv_manager/package.xml

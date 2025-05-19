@@ -1,0 +1,1 @@
+/ros2_ws/build/husarion_ugv/ament_cmake_core/husarion_ugvConfig-version.cmake

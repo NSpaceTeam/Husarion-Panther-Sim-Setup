@@ -1,0 +1,48 @@
+[0.039s] Invoking command in '/ros2_ws/build/husarion_ugv_localization': AMENT_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/opt/ros/humble PYTHONPATH=/ros2_ws/install/husarion_ugv_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /ros2_ws/src/husarion_ugv/husarion_ugv_localization -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/husarion_ugv_localization
+[0.235s] -- The C compiler identification is GNU 11.4.0
+[0.422s] -- The CXX compiler identification is GNU 11.4.0
+[0.447s] -- Detecting C compiler ABI info
+[0.752s] -- Detecting C compiler ABI info - done
+[0.763s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.768s] -- Detecting C compile features
+[0.769s] -- Detecting C compile features - done
+[0.778s] -- Detecting CXX compiler ABI info
+[1.054s] -- Detecting CXX compiler ABI info - done
+[1.063s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.080s] -- Detecting CXX compile features
+[1.082s] -- Detecting CXX compile features - done
+[1.087s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.490s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.600s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.740s] -- Configuring done
+[1.746s] -- Generating done
+[1.749s] -- Build files have been written to: /ros2_ws/build/husarion_ugv_localization
+[1.760s] Invoked command in '/ros2_ws/build/husarion_ugv_localization' returned '0': AMENT_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/opt/ros/humble PYTHONPATH=/ros2_ws/install/husarion_ugv_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /ros2_ws/src/husarion_ugv/husarion_ugv_localization -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/husarion_ugv_localization
+[1.760s] Invoking command in '/ros2_ws/build/husarion_ugv_localization': AMENT_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/opt/ros/humble PYTHONPATH=/ros2_ws/install/husarion_ugv_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /ros2_ws/build/husarion_ugv_localization -- -j4 -l4
+[1.908s] Invoked command in '/ros2_ws/build/husarion_ugv_localization' returned '0': AMENT_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/opt/ros/humble PYTHONPATH=/ros2_ws/install/husarion_ugv_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /ros2_ws/build/husarion_ugv_localization -- -j4 -l4
+[1.909s] Invoking command in '/ros2_ws/build/husarion_ugv_localization': AMENT_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/opt/ros/humble PYTHONPATH=/ros2_ws/install/husarion_ugv_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /ros2_ws/build/husarion_ugv_localization
+[1.925s] -- Install configuration: "Release"
+[1.925s] -- Execute custom install script
+[1.925s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/config/enu_localization.yaml
+[1.952s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/config/enu_localization_with_gps.yaml
+[1.997s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/config/nmea_navsat.yaml
+[2.042s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/config/relative_localization.yaml
+[2.086s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/config/relative_localization_with_gps.yaml
+[2.120s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/launch/localization.launch.py
+[2.161s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/launch/nmea_navsat.launch.py
+[2.191s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/ament_index/resource_index/package_run_dependencies/husarion_ugv_localization
+[2.226s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/ament_index/resource_index/parent_prefix_path/husarion_ugv_localization
+[2.241s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/environment/ament_prefix_path.sh
+[2.254s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/environment/ament_prefix_path.dsv
+[2.267s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/environment/path.sh
+[2.281s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/environment/path.dsv
+[2.294s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/local_setup.bash
+[2.307s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/local_setup.sh
+[2.319s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/local_setup.zsh
+[2.333s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/local_setup.dsv
+[2.347s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/package.dsv
+[2.361s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/ament_index/resource_index/packages/husarion_ugv_localization
+[2.378s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/cmake/husarion_ugv_localizationConfig.cmake
+[2.393s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/cmake/husarion_ugv_localizationConfig-version.cmake
+[2.408s] -- Symlinking: /ros2_ws/install/husarion_ugv_localization/share/husarion_ugv_localization/package.xml
+[2.428s] Invoked command in '/ros2_ws/build/husarion_ugv_localization' returned '0': AMENT_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/install/husarion_ugv_utils:/opt/ros/humble PYTHONPATH=/ros2_ws/install/husarion_ugv_utils/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /ros2_ws/build/husarion_ugv_localization
