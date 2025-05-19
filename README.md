@@ -1,4 +1,3 @@
-Okay, here's a README.md file for your GitHub repository based on the steps you provided. I've made a few minor clarifications and organized it for clarity.
 
 # Panther Simulation with Docker Setup
 
