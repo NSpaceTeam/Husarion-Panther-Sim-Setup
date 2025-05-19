@@ -25,7 +25,7 @@ Follow these steps in order on your **host machine** unless specified otherwise.
 ```bash
 docker --version
 docker run hello-world # Test if docker is working
-
+```
 Step 1: Add panther_connect Bash Function
 
 This function helps you easily connect to (or start and connect to) your Panther simulation Docker container.
