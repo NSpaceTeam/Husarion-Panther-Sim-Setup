@@ -1,171 +1,67 @@
+Okay, here's a README.md file for your GitHub repository based on the steps you provided. I've made a few minor clarifications and organized it for clarity.
 
-# Panther Gazebo Simulation with Docker
+# Panther Simulation with Docker Setup
 
-This guide provides step-by-step instructions to set up and run the Husarion Panther Gazebo simulation environment using Docker.
+This guide provides step-by-step instructions to set up and run the Husarion Panther UGV simulation in a Docker container using ROS 2 Humble.
 
 ## Prerequisites
 
-*   A Linux system (commands are for Debian/Ubuntu-based distributions).
-*   An X11 server running (standard on most Linux desktops).
+1.  **Linux Operating System:** These instructions are tailored for a Linux environment.
+2.  **Docker Engine (CLI):** You must install Docker Engine.
+    *   **IMPORTANT:** **Do NOT install Docker Desktop.** Docker Desktop for Linux creates its own VM which can complicate X11 forwarding and device access for robotics simulations.
+    *   Follow the official Docker Engine installation guide for your Linux distribution: [Install Docker Engine](https://docs.docker.com/engine/install/)
+    *   Ensure your user is added to the `docker` group to run Docker commands without `sudo`:
+        ```bash
+        sudo usermod -aG docker $USER
+        ```
+        You'll need to log out and log back in for this change to take effect.
 
-## Installation and Setup
+## Setup Instructions
 
-Follow these commands in your terminal.
+Follow these steps in order on your **host machine** unless specified otherwise.
 
-1.  **Update Package List and Install Docker:**
-    ```bash
-    sudo apt update
-    sudo apt install -y docker.io
-    ```
+### Step 0: Verify Docker Installation
+(This is essentially covered by Prerequisites, but ensure Docker is working)
 
-2.  **Enable and Start Docker Service:**
-    ```bash
-    sudo systemctl enable docker
-    sudo systemctl start docker
-    ```
-
-3.  **Add Your User to the `docker` Group (Optional but Recommended):**
-    This allows you to run `docker` commands without `sudo`.
-    ```bash
-    sudo usermod -aG docker ${USER}
-    ```
-    **Important:** You will need to log out and log back in, or open a new terminal session for this change to take effect. You can also temporarily gain group permissions by running `newgrp docker` in your current terminal (this new group membership will only apply to that specific terminal session).
-
-4.  **Pull the Panther Gazebo Docker Image:**
-    ```bash
-    docker pull husarion/panther-gazebo:humble-ros2-devel
-    ```
-
-5.  **Allow Local X11 Connections:**
-    This command allows Docker containers to display GUIs on your host machine.
-    ```bash
-    xhost +local:root
-    ```
-    *Note: This setting is temporary and will be reset on reboot. You might want to add it to your `~/.xinitrc` or desktop environment's startup scripts if you need it persistently, but be aware of the security implications.*
-
-6.  **Run the Panther Simulation Container (First Time):**
-    This command starts the simulation container. It will be named `my_panther_sim`.
-    ```bash
-    docker run -it \
-      --name my_panther_sim \
-      --env="DISPLAY" \
-      --env="QT_X11_NO_MITSHM=1" \
-      --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-      --network host \
-      --privileged \
-      husarion/panther-gazebo:humble-ros2-devel
-    ```
-    After this command, you should be inside the Docker container's shell. You can launch Gazebo or other ROS 2 tools from here. To exit the container's shell, type `exit`. The container will stop.
-
-7.  **Create a Bash Helper Function `panther_connect`:**
-    This function will make it easier to start and connect to your `my_panther_sim` container in the future. Paste the entire block below into your terminal and press Enter.
-    ```bash
-    cat << 'EOF' >> ~/.bashrc
-
-    panther_connect() {
-        xhost +local:root
-        local container_name="my_panther_sim" # <--- CHANGE THIS if your container name is different
-        local exec_target_name="my_panther_sim" # <--- CHANGE THIS if exec target is different from start target (usually the same)
-
-        # Check if the container is currently running
-        # docker ps -q filters for quiet (ID only) and -f name filters by exact name
-        if [ -n "$(docker ps -q -f name="^${container_name}$")" ]; then
-            echo "Container '${exec_target_name}' is active. Attaching with exec..."
-            docker exec -it "${exec_target_name}" /bin/bash
-        else
-            # Check if the container exists (even if stopped)
-            # docker ps -aq filters for all (a) quiet (q) and -f name filters by exact name
-            if [ -n "$(docker ps -aq -f name="^${container_name}$")" ]; then
-                echo "Container '${container_name}' exists but is not active. Starting..."
-                if docker start "${container_name}"; then
-                    echo "Container '${container_name}' started successfully."
-                    echo "Attempting to attach now..."
-                    docker exec -it "${exec_target_name}" /bin/bash
-                else
-                    echo "Failed to start container '${container_name}'. Check Docker logs."
-                fi
-            else
-                echo "Container '${container_name}' does not exist. Please create or run it first."
-                echo "Example: Use the 'docker run...' command provided in the setup instructions."
-            fi
-        fi
-    }
-    EOF
-    && source ~/.bashrc
-    ```
-
-8.  **Apply Bashrc Changes:**
-    For the `panther_connect` function to be available, you need to source your `.bashrc` file or open a new terminal.
-    ```bash
-    source ~/.bashrc
-    ```
-9. **Run enviorment**
-    ```bash
-    panther_connect
-    ```
-10. **Create Helper function in docker container:**
-    this function will make it easier to start the simulation
-    ```bash
-    echo 'alias run_sim="ros2 launch husarion_ugv_gazebo simulation.launch.py"' >> ~/.bashrc && source ~/.bashrc
-    ```
-> [!IMPORTANT]
->**DO NOT run**  ``` apt upgrade``` it will **BREAK** simulation
-11. **run apt update**
-    ```bash
-    apt update
-    ```
-12. **install colcon**
-     ```bash
-    apt install python3-colcon-common-extensions -y
-    ```
-13. **install Git**
-     ```bash
-    apt install git -y
-     ```
-
-14. **install  build-essentials**
-    ```bash
-    apt install build-essential -y
-    ```
-15. **optional: install nano and gedit**
-    ```bash
-    apt install nano -y && apt install gedit -y
-    ```
-    **ALL COMMANDS IN ONE**
-    ```bash
-     apt update && apt install -y python3-colcon-common-extensions git build-essential nano gedit python3-rosdep && rosdep init && rosdep update
-    ```
-## Usage
-
-After completing the setup:
-
-1.  **Ensure X11 is configured if you rebooted:**
-    If you have rebooted your machine since step 5, you might need to run `xhost +local:root` again.
-
-2.  **Connect to the Panther Simulation:**
-    Open a new terminal and simply type:
-    ```bash
-    panther_connect
-    ```
-    This will either:
-    *   Attach to the already running `my_panther_sim` container.
-    *   Start the `my_panther_sim` container if it exists but is stopped, and then attach to it.
-    *   Inform you if the container doesn't exist (meaning you need to run the `docker run...` command from step 6 again).
-3. **Run gazeboo simulation**
-   inside docker container:
-   ```bash
-   run_sim
-   ```
-
-Once inside the container (your terminal prompt will change), you can launch Gazebo, RViz, and other ROS 2 tools as per the Panther documentation. For example:
 ```bash
-ros2 launch panther_gazebo empty_world.launch.py
+docker --version
+docker run hello-world # Test if docker is working
 
-Managing the Container
+Step 1: Add panther_connect Bash Function
 
-To stop the container (from outside, if it's running in detached mode or you exited its shell):
+This function helps you easily connect to (or start and connect to) your Panther simulation Docker container.
 
-docker stop my_panther_sim
+Open your ~/.bashrc file with a text editor (e.g., nano ~/.bashrc or gedit ~/.bashrc) and add the following function to the end of the file:
+
+cat << 'EOF' >> ~/.bashrc
+
+panther_connect() {
+    xhost +local:root # Allow local Docker container to access X server
+    local container_name="my_panther_sim" # <--- CHANGE THIS if your container name is different
+    local exec_target_name="my_panther_sim" # <--- CHANGE THIS if exec target is different from start target (usually the same)
+
+    # Check if the container is currently running
+    if [ -n "$(docker ps -q -f name="^${container_name}$")" ]; then
+        echo "Container '${exec_target_name}' is active. Attaching with exec..."
+        docker exec -it "${exec_target_name}" /bin/bash
+    else
+        # Check if the container exists (even if stopped)
+        if [ -n "$(docker ps -aq -f name="^${container_name}$")" ]; then
+            echo "Container '${container_name}' exists but is not active. Starting..."
+            if docker start "${container_name}"; then
+                echo "Container '${container_name}' started successfully."
+                echo "Attempting to attach now..."
+                docker exec -it "${exec_target_name}" /bin/bash
+            else
+                echo "Failed to start container '${container_name}'. Check Docker logs."
+            fi
+        else
+            echo "Container '${container_name}' does not exist. Please create or run it first."
+            echo "Example: Use the 'docker run...' command provided in the setup instructions."
+        fi
+    fi
+}
+EOF
 IGNORE_WHEN_COPYING_START
 content_copy
 download
@@ -173,10 +69,20 @@ Use code with caution.
 Bash
 IGNORE_WHEN_COPYING_END
 
-To remove the container (if you want to start fresh with docker run):
-Make sure it's stopped first.
+Then, source your .bashrc to make the function available in your current terminal session:
 
-docker rm my_panther_sim
+source ~/.bashrc
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Bash
+IGNORE_WHEN_COPYING_END
+Step 2: Allow X Server Connections
+
+This command allows Docker containers running as root to connect to your host's X server for GUI applications (like Gazebo). The panther_connect function also runs this, but it's good to run it once initially.
+
+xhost +local:root
 IGNORE_WHEN_COPYING_START
 content_copy
 download
@@ -184,9 +90,20 @@ Use code with caution.
 Bash
 IGNORE_WHEN_COPYING_END
 
-To list running containers:
+(Note: xhost +local:root is generally safe for local development. For more security-conscious setups, explore xauth methods.)
 
-docker ps
+Step 3: Run the Panther Docker Container
+
+This command will download the Panther simulation Docker image (if not already present) and start a new container named my_panther_sim.
+
+docker run -it \
+  --name my_panther_sim \
+  --env="DISPLAY" \
+  --env="QT_X11_NO_MITSHM=1" \
+  --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+  --network host \
+  --privileged \
+  husarion/panther-gazebo:humble-ros2-devel
 IGNORE_WHEN_COPYING_START
 content_copy
 download
@@ -194,16 +111,143 @@ Use code with caution.
 Bash
 IGNORE_WHEN_COPYING_END
 
-To list all containers (including stopped ones):
+You should now be inside the Docker container's terminal. If you exit this terminal, the container will stop. You can use panther_connect (from Step 1) in a new host terminal to restart and/or re-enter it.
 
-docker ps -a
+The following steps are to be performed inside the Docker container's terminal.
+
+If you are not already inside, open a new host terminal and run:
+
+panther_connect
 IGNORE_WHEN_COPYING_START
 content_copy
 download
 Use code with caution.
 Bash
 IGNORE_WHEN_COPYING_END
-You can copy and paste this entire block into a file named `README.md`.
+Step 4: Create Simulation Alias (Inside Docker)
+
+This creates a convenient alias to launch the Gazebo simulation.
+
+echo 'alias run_sim="ros2 launch husarion_ugv_gazebo simulation.launch.py"' >> ~/.bashrc && source ~/.bashrc
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Bash
+IGNORE_WHEN_COPYING_END
+Step 5: Install Dependencies (Inside Docker)
+
+Update package lists and install necessary tools for building ROS 2 packages and managing dependencies.
+
+apt update && apt install -y python3-colcon-common-extensions git build-essential nano gedit python3-rosdep && rosdep init && rosdep update
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Bash
+IGNORE_WHEN_COPYING_END
+
+(Note: rosdep init might say "already initialized" if the base image did it, which is fine. rosdep update is still important.)
+
+Step 6: Prepare ros2_ws (Inside Docker)
+
+Navigate to the ros2_ws (ROS 2 workspace) directory and clear any existing content to prepare for a fresh clone.
+
+cd /ros2_ws && rm -rf * .git
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Bash
+IGNORE_WHEN_COPYING_END
+Step 7: Clone Simulation Setup (Inside Docker)
+
+Clone the simulation setup repository into the workspace.
+(Note: The original step git pull ... assumes a repo is already initialized. git clone is more appropriate for a fresh setup into an empty directory.)
+
+git clone https://github.com/Grkila/Husarion-panther-sim-setup.git .
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Bash
+IGNORE_WHEN_COPYING_END
+
+(The . at the end clones the contents directly into /ros2_ws instead of into a subdirectory named Husarion-panther-sim-setup.)
+
+You might need to build the workspace if the cloned repository contains source code that needs compilation (e.g., custom ROS 2 packages). If it only contains launch files and configurations that use pre-built packages from the Docker image, a build might not be strictly necessary.
+If a build is needed:
+
+# Potentially source ROS 2 setup if not already in .bashrc of the container
+# source /opt/ros/humble/setup.bash
+colcon build --symlink-install
+source install/setup.bash
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Bash
+IGNORE_WHEN_COPYING_END
+
+(Check the Husarion-panther-sim-setup repository's own README if it specifies build steps.)
+
+Running the Simulation
+
+Connect to the Container:
+Open a terminal on your host machine and run:
+
+panther_connect
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Bash
+IGNORE_WHEN_COPYING_END
+
+This will either attach to the running container or start it if it's stopped, and then attach.
+
+Launch the Simulation (Inside Docker):
+Once inside the container's terminal, use the alias created in Step 4:
+
+run_sim
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Bash
+IGNORE_WHEN_COPYING_END
+
+Gazebo and other simulation windows should appear on your host machine's display.
+
+Troubleshooting
+
+"cannot open display: :0" or GUI issues:
+
+Ensure you ran xhost +local:root on the host before starting/connecting to the container. The panther_connect script attempts this.
+
+Verify your DISPLAY environment variable is correctly set and passed to the container. The docker run command includes --env="DISPLAY".
+
+Ensure the /tmp/.X11-unix volume mount is correct.
+
+panther_connect: "Container ... does not exist."
+
+Make sure you have successfully run the docker run ... command (Step 3) at least once to create the container.
+
+Check if you customized container_name in the panther_connect function and if it matches the --name used in docker run.
+
+Permission Denied for Docker:
+
+Ensure your user is part of the docker group on the host machine (see Prerequisites). You might need to log out and back in.
+
+git clone fails:
+
+Ensure you have network connectivity inside the Docker container (ping google.com). The --network host flag should provide this.
+
+Customization
+
+Container Name: If you change the --name in the docker run command (Step 3), remember to update container_name and exec_target_name in the panther_connect function in your ~/.bashrc accordingly.
+
+This README provides a comprehensive guide. Remember to replace `https://github.com/Grkila/Husarion-panther-sim-setup.git` with the actual URL if it's different or if you intend for users to fork and use their own repository. I've also made the `git` command in step 7 a `git clone` which is more appropriate for pulling code into a fresh `ros2_ws` after clearing it.
 IGNORE_WHEN_COPYING_START
 content_copy
 download
