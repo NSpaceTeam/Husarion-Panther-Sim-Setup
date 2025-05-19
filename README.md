@@ -7,7 +7,7 @@ This guide provides step-by-step instructions to set up and run the Husarion Pan
 1.  **Linux Operating System:** These instructions are tailored for a Linux environment.
 2.  **Docker Engine (CLI):** You must install Docker Engine.
     *   **IMPORTANT:** **Do NOT install Docker Desktop.** Docker Desktop for Linux creates its own VM which can complicate X11 forwarding and device access for robotics simulations.
-    *   Follow the official Docker Engine installation guide for your Linux distribution: [Install Docker Engine](https://docs.docker.com/engine/install/)
+    *   Follow the official Docker Engine installation guide for your Linux distribution: [Install Docker Engine](https://docs.docker.com/desktop/setup/install/linux/ubuntu/)
     *   Ensure your user is added to the `docker` group to run Docker commands without `sudo`:
         ```bash
         sudo usermod -aG docker $USER
