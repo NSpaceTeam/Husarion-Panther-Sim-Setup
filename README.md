@@ -146,7 +146,7 @@ echo "source /ros2_ws/install/setup.bash" >> ~/.bashrc
 
 (Check the Husarion-panther-sim-setup repository's own README if it specifies particular build steps or if a build is necessary.)
 
-Running the Simulation
+# Running the Simulation
 
 Connect to the Container:
 Open a terminal on your host machine and run:
@@ -160,36 +160,4 @@ Once inside the container's terminal, use the alias created in Step 4:
 ```bash
 run_sim
 ```
-Gazebo and other simulation windows should appear on your host machine's display.
 
-Troubleshooting
-
-"cannot open display: :0" or GUI issues:
-
-Ensure you ran xhost +local:root on the host before starting/connecting to the container. The panther_connect script attempts this.
-
-Verify your DISPLAY environment variable is correctly set and passed to the container. The docker run command includes --env="DISPLAY".
-
-Ensure the /tmp/.X11-unix volume mount is correct.
-
-panther_connect: "Container ... does not exist."
-
-Make sure you have successfully run the docker run ... command (Step 3) at least once to create the container.
-
-Check if you customized container_name in the panther_connect function and if it matches the --name used in docker run.
-
-Permission Denied for Docker:
-
-Ensure your user is part of the docker group on the host machine (see Prerequisites). You might need to log out and back in.
-
-git clone fails:
-
-Ensure you have network connectivity inside the Docker container (e.g., try ping google.com). The --network host flag in the docker run command should provide this.
-
-ROS 2 commands not found (e.g., ros2, colcon):
-
-Make sure you have sourced the ROS 2 environment setup script (e.g., source /opt/ros/humble/setup.bash) and your workspace setup script (e.g., source /ros2_ws/install/setup.bash) inside the container. It's good practice to add these to the container's ~/.bashrc.
-
-Customization
-
-Container Name: If you change the --name in the docker run command (Step 3), remember to update container_name and exec_target_name in the panther_connect function in your host's ~/.bashrc accordingly.
