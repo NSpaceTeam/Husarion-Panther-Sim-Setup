@@ -81,7 +81,7 @@ IGNORE_WHEN_COPYING_END
 Step 3: Run the Panther Docker Container
 
 This command will download the Panther simulation Docker image (if not already present) and start a new container named my_panther_sim.
-```
+```bash
 docker run -it \
   --name my_panther_sim \
   --env="DISPLAY" \
@@ -97,66 +97,41 @@ You should now be inside the Docker container's terminal. If you exit this termi
 The following steps are to be performed inside the Docker container's terminal.
 
 If you are not already inside, open a new host terminal and run:
-
+```bash
 panther_connect
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
-Step 4: Create Simulation Alias (Inside Docker)
+```
 
 This creates a convenient alias to launch the Gazebo simulation.
-
+```bash
 echo 'alias run_sim="ros2 launch husarion_ugv_gazebo simulation.launch.py"' >> ~/.bashrc && source ~/.bashrc
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
+```
 Step 5: Install Dependencies (Inside Docker)
 
 Update package lists and install necessary tools for building ROS 2 packages and managing dependencies.
-
+```bash
 apt update && apt install -y python3-colcon-common-extensions git build-essential nano gedit python3-rosdep && rosdep init && rosdep update
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
-
+```
 (Note: rosdep init might say "already initialized" if the base image did it, which is fine. rosdep update is still important.)
 
 Step 6: Prepare ros2_ws (Inside Docker)
 
 Navigate to the ros2_ws (ROS 2 workspace) directory and clear any existing content to prepare for a fresh clone.
-
+```bash
 cd /ros2_ws && rm -rf * .git
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
+```
 Step 7: Clone Simulation Setup (Inside Docker)
 
 Clone the simulation setup repository into the workspace.
 (Replace https://github.com/Grkila/Husarion-panther-sim-setup.git with your repository URL if different.)
 
 # Ensure you are in /ros2_ws
+```bash
 cd /ros2_ws
-
+```
 # Clone the repository contents into the current directory (/ros2_ws)
+```bash
 git clone https://github.com/Grkila/Husarion-panther-sim-setup.git .
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
+```
 
 (The . at the end of git clone ... . clones the contents of the repository directly into the current directory /ros2_ws instead of into a subdirectory named after the repository.)
 
@@ -186,28 +161,16 @@ Running the Simulation
 
 Connect to the Container:
 Open a terminal on your host machine and run:
-
+```bash 
 panther_connect
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
-
+````
 This will either attach to the running container or start it if it's stopped, and then attach.
 
 Launch the Simulation (Inside Docker):
 Once inside the container's terminal, use the alias created in Step 4:
-
+```bash
 run_sim
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
-
+```
 Gazebo and other simulation windows should appear on your host machine's display.
 
 Troubleshooting
@@ -241,9 +204,3 @@ Make sure you have sourced the ROS 2 environment setup script (e.g., source /opt
 Customization
 
 Container Name: If you change the --name in the docker run command (Step 3), remember to update container_name and exec_target_name in the panther_connect function in your host's ~/.bashrc accordingly.
-
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-IGNORE_WHEN_COPYING_END
