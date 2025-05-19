@@ -1,0 +1,1 @@
+/ros2_ws/build/husarion_ugv_msgs/rosidl_generator_cpp/husarion_ugv_msgs/msg/charging_status.hpp

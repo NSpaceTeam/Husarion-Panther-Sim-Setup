@@ -1,0 +1,6 @@
+# Hashes of file build rules.
+c6e3a75d5cf5b04da64174fa6c93200f CMakeFiles/husarion_ugv_manager_uninstall
+2e491b3b810cbc3748de233a59c0afb4 include/husarion_ugv_manager/lights_manager_parameters.hpp
+6c9d58b2bfa6612370e02836a1a051e2 include/husarion_ugv_manager/safety_manager_parameters.hpp
+b04a0f98b2dcc01e715f147a0c92708f include/lights_manager_parameters.hpp
+fa42eb510bbb8c8e6c4f4a1283a122fd include/safety_manager_parameters.hpp

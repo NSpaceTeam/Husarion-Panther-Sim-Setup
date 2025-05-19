@@ -1,0 +1,1 @@
+/ros2_ws/build/husarion_ugv_msgs/rosidl_generator_py/husarion_ugv_msgs/_husarion_ugv_msgs_s.ep.rosidl_typesupport_c.c

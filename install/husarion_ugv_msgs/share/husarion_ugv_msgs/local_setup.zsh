@@ -1,0 +1,1 @@
+/ros2_ws/build/husarion_ugv_msgs/ament_cmake_environment_hooks/local_setup.zsh

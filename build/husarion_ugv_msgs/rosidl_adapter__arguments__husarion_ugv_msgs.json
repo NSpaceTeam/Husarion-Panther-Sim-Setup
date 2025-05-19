@@ -1,0 +1,20 @@
+{
+  "package_name": "husarion_ugv_msgs",
+  "non_idl_tuples": [
+    "/ros2_ws/src/husarion_ugv/husarion_ugv_msgs:msg/ChargingStatus.msg",
+    "/ros2_ws/src/husarion_ugv/husarion_ugv_msgs:msg/DriverState.msg",
+    "/ros2_ws/src/husarion_ugv/husarion_ugv_msgs:msg/DriverStateNamed.msg",
+    "/ros2_ws/src/husarion_ugv/husarion_ugv_msgs:msg/FaultFlag.msg",
+    "/ros2_ws/src/husarion_ugv/husarion_ugv_msgs:msg/IOState.msg",
+    "/ros2_ws/src/husarion_ugv/husarion_ugv_msgs:msg/LEDAnimation.msg",
+    "/ros2_ws/src/husarion_ugv/husarion_ugv_msgs:msg/LEDAnimationQueue.msg",
+    "/ros2_ws/src/husarion_ugv/husarion_ugv_msgs:msg/LEDImageAnimation.msg",
+    "/ros2_ws/src/husarion_ugv/husarion_ugv_msgs:msg/RobotDriverState.msg",
+    "/ros2_ws/src/husarion_ugv/husarion_ugv_msgs:msg/RuntimeError.msg",
+    "/ros2_ws/src/husarion_ugv/husarion_ugv_msgs:msg/ScriptFlag.msg",
+    "/ros2_ws/src/husarion_ugv/husarion_ugv_msgs:msg/SystemStatus.msg",
+    "/ros2_ws/src/husarion_ugv/husarion_ugv_msgs:srv/SetLEDAnimation.srv",
+    "/ros2_ws/src/husarion_ugv/husarion_ugv_msgs:srv/SetLEDBrightness.srv",
+    "/ros2_ws/src/husarion_ugv/husarion_ugv_msgs:srv/SetLEDImageAnimation.srv"
+  ]
+}
