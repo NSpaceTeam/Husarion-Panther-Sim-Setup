@@ -25,7 +25,8 @@
     lazy: true
 
   - ros_topic_name: <robot_namespace><device_namespace>/zed_node/depth/points
-    gz_ros_topic_name: <robot_namespace><device_namespace>/zed_node/depth/points
+    gz_ros_name: <robot_namespace><device_namespace>/zed_node/depth/points
     ros_type_name: sensor_msgs/msg/PointCloud2
     gz_type_name: ignition.msgs.PointCloudPacked
     lazy: true
+
