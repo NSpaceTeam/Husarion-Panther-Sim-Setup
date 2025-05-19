@@ -1,4 +1,4 @@
-## Panther Simulation with Docker Setup
+# Panther Simulation with Docker Setup
 
 This guide provides step-by-step instructions to set up and run the Husarion Panther UGV simulation in a Docker container using ROS 2 Humble.
 
@@ -131,20 +131,6 @@ git clone https://github.com/Grkila/Husarion-panther-sim-setup.git .
 Build the Workspace (if needed):
 If the cloned repository contains custom ROS 2 packages with source code, you'll need to build the workspace:
 
-# Optional: Source ROS 2 environment if not already in the container's .bashrc
-# source /opt/ros/humble/setup.bash
-
-# Build the workspace
-colcon build --symlink-install
-
-# Source the new workspace's setup file
-source install/setup.bash
-# You might want to add this sourcing command to your ~/.bashrc in the container
-echo "source /ros2_ws/install/setup.bash" >> ~/.bashrc
-
-
-
-(Check the Husarion-panther-sim-setup repository's own README if it specifies particular build steps or if a build is necessary.)
 
 # Running the Simulation
 
