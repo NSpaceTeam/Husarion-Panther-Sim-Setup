@@ -26,7 +26,7 @@ Follow these steps in order on your **host machine** unless specified otherwise.
 docker --version
 docker run hello-world # Test if docker is working
 ```
-Step 1: Add panther_connect Bash Function
+### Step 1: Add panther_connect Bash Function
 
 This function helps you easily connect to (or start and connect to) your Panther simulation Docker container.
 
@@ -67,16 +67,11 @@ This command allows Docker containers running as root to connect to your host's 
 ```
 xhost +local:root
 ```
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
+
 
 (Note: xhost +local:root is generally safe for local development. For more security-conscious setups, explore xauth methods.)
 
-Step 3: Run the Panther Docker Container
+### Step 2: Run the Panther Docker Container
 
 This command will download the Panther simulation Docker image (if not already present) and start a new container named my_panther_sim.
 ```bash
@@ -103,7 +98,7 @@ This creates a convenient alias to launch the Gazebo simulation.
 ```bash
 echo 'alias run_sim="ros2 launch husarion_ugv_gazebo simulation.launch.py"' >> ~/.bashrc && source ~/.bashrc
 ```
-Step 5: Install Dependencies (Inside Docker)
+### Step 3: Install Dependencies (Inside Docker)
 
 Update package lists and install necessary tools for building ROS 2 packages and managing dependencies.
 ```bash
@@ -111,13 +106,13 @@ apt update && apt install -y python3-colcon-common-extensions git build-essentia
 ```
 (Note: rosdep init might say "already initialized" if the base image did it, which is fine. rosdep update is still important.)
 
-Step 6: Prepare ros2_ws (Inside Docker)
+### Step 4: Prepare ros2_ws (Inside Docker)
 
 Navigate to the ros2_ws (ROS 2 workspace) directory and clear any existing content to prepare for a fresh clone.
 ```bash
 cd /ros2_ws && rm -rf * .git
 ```
-Step 7: Clone Simulation Setup (Inside Docker)
+### Step 5: Clone Simulation Setup (Inside Docker)
 
 Clone the simulation setup repository into the workspace.
 (Replace https://github.com/Grkila/Husarion-panther-sim-setup.git with your repository URL if different.)
@@ -146,12 +141,8 @@ colcon build --symlink-install
 source install/setup.bash
 # You might want to add this sourcing command to your ~/.bashrc in the container
 echo "source /ros2_ws/install/setup.bash" >> ~/.bashrc
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Bash
-IGNORE_WHEN_COPYING_END
+
+
 
 (Check the Husarion-panther-sim-setup repository's own README if it specifies particular build steps or if a build is necessary.)
 
