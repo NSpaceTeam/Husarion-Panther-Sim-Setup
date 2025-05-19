@@ -9,7 +9,7 @@
             use_sim:=false
             imu_xyz:='0.169 0.025 0.092'
             imu_rpy:='0.0 0.0 -1.57'
-            namespace:=''">
+            namespace:='panther_rover'">
 
     <xacro:if value="${use_sim}">
       <xacro:property name="imu_xyz" value="-0.195 0.010 0.085" />
@@ -25,6 +25,7 @@
     <xacro:include filename="$(find husarion_ugv_description)/urdf/panther/base.urdf.xacro" ns="body" />
     <xacro:include filename="$(find husarion_ugv_description)/urdf/common/gazebo.urdf.xacro" ns="gazebo" />
     <xacro:include filename="$(find husarion_ugv_description)/urdf/common/wheel.urdf.xacro" ns="wheel" />
+    <xacro:include filename="$(find ros_components_description)/urdf/stereolabs_zed.urdf.xacro" ns="cam" />
 
     <!-- BODY DECLARATION -->
     <xacro:body.body
@@ -41,7 +42,7 @@
     <xacro:wheel.wheel
       wheel_config="${wheel_config}"
       wheel_separation_x="${wheel_separation_x}"
-      prefix="fr" />
+      prefix="fr" />  
 
     <xacro:wheel.wheel
       wheel_config="${wheel_config}"
@@ -52,6 +53,31 @@
       wheel_config="${wheel_config}"
       wheel_separation_x="${wheel_separation_x}"
       prefix="rr" />
+
+     <xacro:cam.zed_camera
+      parent_link="mount_link"
+      xyz="0.2 0.0 0.1"
+      rpy="0.0 0.0 0.0"
+      device_namespace="front_cam"
+      model="zedx"/>
+    <xacro:cam.zed_camera
+      parent_link="mount_link"
+      xyz="-0.2 0.0 0.1"
+      rpy="0.0 0.0 3.1416"
+      device_namespace="back_cam"
+      model="zedx"/>
+      <xacro:cam.zed_camera
+      parent_link="mount_link"
+      xyz="0.0 0.2 0.1"
+      rpy="0.0 0.0 1.5708"
+      device_namespace="left_cam"
+      model="zedx"/>
+      <xacro:cam.zed_camera
+      parent_link="mount_link"
+      xyz="0.0 -0.2 0.1"
+      rpy="0.0 0.0 -1.5708"
+      device_namespace="right_cam"
+      model="zedx"/>
 
     <ros2_control name="${ns}panther_system" type="system">
       <hardware>
@@ -188,3 +214,4 @@
   </xacro:macro>
 
 </robot>
+
