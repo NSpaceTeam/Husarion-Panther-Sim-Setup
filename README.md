@@ -131,6 +131,52 @@ git clone https://github.com/Grkila/Husarion-panther-sim-setup.git .
 Build the Workspace (if needed):
 If the cloned repository contains custom ROS 2 packages with source code, you'll need to build the workspace:
 
+### Step 6: Setup Husarnet (Inside Docker)
+
+These steps are to be performed **inside the Docker container's terminal**.
+
+#### I. Install Husarnet Client
+
+The simplest way to install Husarnet is to paste the following line into your terminal:
+
+```bash
+curl -s https://install.husarnet.com/install.sh | sudo bash
+```
+
+This method works on APT and Yum based Linux distributions such as Debian, Ubuntu, CentOS, RHEL, Fedora or Mint.
+
+#### II. Join a Husarnet Network
+
+After installing Husarnet, you need to connect your Docker container to a Husarnet network. You will need a **Join Code** for the network you wish to join.
+
+```bash
+# Replace YOUR_JOIN_CODE with the actual Join Code from your Husarnet dashboard
+sudo husarnet join YOUR_JOIN_CODE your_device_hostname
+```
+Replace `your_device_hostname` with a descriptive name for your Panther simulation instance in the Husarnet network.
+
+#### III. Source Husarnet ROS 2 Setup Script
+
+The `Husarion-panther-sim-setup` repository includes a script to configure ROS 2 for Husarnet. To ensure ROS 2 is aware of the Husarnet network interfaces, source this script. This step is crucial for ROS 2 nodes to communicate over Husarnet.
+
+Assuming the script is named `setup_husarnet_ros2.sh` and is located at the root of your cloned repository (i.e., in `/ros2_ws/`), you can source it with:
+```bash
+source /ros2_ws/husarnet_connection_test_packet/setup_husarnet_ros2.sh
+```
+It's a good idea to add this to your `~/.bashrc` file in the Docker container so it's sourced automatically every time you open a new terminal:
+```bash
+echo 'source /ros2_ws/husarnet_connection_test_packet/setup_husarnet_ros2.sh' >> ~/.bashrc && source ~/.bashrc
+```
+Make sure to adjust the path if your script is located elsewhere within the `/ros2_ws` directory.
+
+**Accessing Topics from a Second PC:**
+
+After completing these Husarnet setup steps on both your Panther simulation container and a second PC (which also needs Husarnet installed and joined to the same network):
+
+1.  Ensure the `setup_husarnet_ros2.sh` script (or its equivalent) is sourced on the second PC as well.
+2.  You should then be able to directly publish to or subscribe to ROS 2 topics from the Panther simulation on your second PC, and vice-versa.
+
+**Important Note on `ros2 topic list`:** Due to the nature of peer-to-peer networking with Husarnet DDS, commands like `ros2 topic list` or `ros2 node list` might not show all topics or nodes across the network immediately or reliably. However, direct communication (publishing to a known topic name or subscribing to a known topic name) should still work as expected once the Husarnet connection is established and the setup script is sourced on both ends.
 
 # Running the Simulation
 
@@ -138,7 +184,7 @@ Connect to the Container:
 Open a terminal on your host machine and run:
 ```bash 
 panther_connect
-````
+```
 This will either attach to the running container or start it if it's stopped, and then attach.
 
 Launch the Simulation (Inside Docker):
