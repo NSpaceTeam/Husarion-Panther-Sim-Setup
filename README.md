@@ -155,6 +155,19 @@ sudo husarnet join YOUR_JOIN_CODE your_device_hostname
 ```
 Replace `your_device_hostname` with a descriptive name for your Panther simulation instance in the Husarnet network.
 
+After joining, verify the connection status:
+```bash
+husarnet status
+```
+Look for the following in the output to ensure a successful connection:
+- The "Base server connection" should ideally show `UDP`.
+- Under "Readiness":
+  - `● Is ready to handle data?   yes`
+  - `● Is ready to join?          yes`
+  - `● Is joined?                 yes`
+
+If you see issues, you might need to check your network configuration or firewall settings. As a troubleshooting step, you can temporarily disable your firewall (e.g., `sudo ufw disable` on Ubuntu) to see if it resolves the Husarnet connection problem. **Remember to re-enable your firewall (`sudo ufw enable`) after testing, as disabling it can be a security risk.**
+
 #### III. Source Husarnet ROS 2 Setup Script
 
 The `Husarion-panther-sim-setup` repository includes a script to configure ROS 2 for Husarnet. To ensure ROS 2 is aware of the Husarnet network interfaces, source this script. This step is crucial for ROS 2 nodes to communicate over Husarnet.
