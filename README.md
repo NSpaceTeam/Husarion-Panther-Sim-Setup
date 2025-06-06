@@ -15,6 +15,8 @@ Before you begin, ensure you have the following installed on your **host Linux s
     *   Up-to-date Mesa drivers for your AMD GPU/APU.
 5.  **X11 Server:** Standard on most Linux desktop environments.
 
+If you do not know or have NVIDIA drivers or NVIDIA Container Toolkit you can check it all at following link: https://gist.github.com/Konstantin036/6f83cffb3675e014bff94885a8e6a225 
+
 ## Files
 
 *   `Dockerfile`: Defines the Docker image, installing ROS 2 Jazzy, `husarion_ugv_ros`, and its dependencies.
