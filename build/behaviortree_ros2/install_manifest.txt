@@ -1,3 +1,0 @@
-/ros2_ws/install/behaviortree_ros2/lib/libbehaviortree_ros2.a
-/ros2_ws/install/behaviortree_ros2/share/behaviortree_ros2/cmake/behaviortree_ros2TargetsExport.cmake
-/ros2_ws/install/behaviortree_ros2/share/behaviortree_ros2/cmake/behaviortree_ros2TargetsExport-release.cmake

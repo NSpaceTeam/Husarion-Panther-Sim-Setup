@@ -1,1 +1,0 @@
-/ros2_ws/src/husarion_ugv/husarion_ugv_gazebo/launch/simulate_robot.launch.py

@@ -1,6 +1,0 @@
-Invoking command in '/ros2_ws/build/imu_sensor_broadcaster': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros2_ws/src/imu_sensor_broadcaster -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/imu_sensor_broadcaster
-Invoked command in '/ros2_ws/build/imu_sensor_broadcaster' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros2_ws/src/imu_sensor_broadcaster -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/ros2_ws/install/imu_sensor_broadcaster
-Invoking command in '/ros2_ws/build/imu_sensor_broadcaster': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/imu_sensor_broadcaster -- -j4 -l4
-Invoked command in '/ros2_ws/build/imu_sensor_broadcaster' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/build/imu_sensor_broadcaster -- -j4 -l4
-Invoking command in '/ros2_ws/build/imu_sensor_broadcaster': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/imu_sensor_broadcaster
-Invoked command in '/ros2_ws/build/imu_sensor_broadcaster' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/build/imu_sensor_broadcaster

@@ -1,1 +1,0 @@
-/ros2_ws/src/husarion_ugv/husarion_ugv_description/launch/overwrite_robot_description.launch.py

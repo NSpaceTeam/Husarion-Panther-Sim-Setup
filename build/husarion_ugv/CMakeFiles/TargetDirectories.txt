@@ -1,9 +1,0 @@
-/ros2_ws/build/husarion_ugv/CMakeFiles/uninstall.dir
-/ros2_ws/build/husarion_ugv/CMakeFiles/husarion_ugv_uninstall.dir
-/ros2_ws/build/husarion_ugv/CMakeFiles/test.dir
-/ros2_ws/build/husarion_ugv/CMakeFiles/edit_cache.dir
-/ros2_ws/build/husarion_ugv/CMakeFiles/rebuild_cache.dir
-/ros2_ws/build/husarion_ugv/CMakeFiles/list_install_components.dir
-/ros2_ws/build/husarion_ugv/CMakeFiles/install.dir
-/ros2_ws/build/husarion_ugv/CMakeFiles/install/local.dir
-/ros2_ws/build/husarion_ugv/CMakeFiles/install/strip.dir

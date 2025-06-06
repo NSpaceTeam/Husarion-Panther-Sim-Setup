@@ -1,5 +1,0 @@
-/ros2_ws/install/husarion_ugv_gazebo/lib/libestop_system.so
-/ros2_ws/install/husarion_ugv_gazebo/lib/libEStop.so
-/ros2_ws/install/husarion_ugv_gazebo/lib/libLEDStrip.so
-/ros2_ws/install/husarion_ugv_gazebo/share/husarion_ugv_gazebo/cmake/export_husarion_ugv_gazeboExport.cmake
-/ros2_ws/install/husarion_ugv_gazebo/share/husarion_ugv_gazebo/cmake/export_husarion_ugv_gazeboExport-release.cmake

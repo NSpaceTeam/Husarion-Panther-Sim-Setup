@@ -1,2 +1,0 @@
-husarion_ugv_msgs/LEDAnimation animation
-bool repeating
