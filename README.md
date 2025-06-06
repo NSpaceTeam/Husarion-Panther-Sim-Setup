@@ -150,20 +150,20 @@ The list should contain an image that includes `nvidia/cuda`.
 ---
 
 ## 🚀 Running ROS 2 simulation with Nvidia GPU:
-Find and replace the original `docker run` command in script setup.sh with the following:
+Find and replace the original `BASE_DOCKER_RUN_OPTIONS=...` command in script setup.sh with the following:
 ```bash
-docker run -it \
+BASE_DOCKER_RUN_OPTIONS="-it \
   --gpus all \
   --name my_panther_sim \
-  --env="DISPLAY" \
-  --env="QT_X11_NO_MITSHM=1" \
-  --env="NVIDIA_DRIVER_CAPABILITIES=all" \
-  --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+  --env=\"DISPLAY\" \
+  --env=\"QT_X11_NO_MITSHM=1\" \
+  --env=\"NVIDIA_DRIVER_CAPABILITIES=all\" \
+  --volume=\"/tmp/.X11-unix:/tmp/.X11-unix:rw\" \
   --network host \
-  --memory=10g \
-  --cpus=6 \
+  --memory=\"${MEMORY_LIMIT}\" \
+  --cpus=\"${CPU_LIMIT}\" \
   --device /dev/dri \
-  --privileged \
+  --privileged"
 ```
 > `--gpus all` enables access to all GPU resources.
 > `--device /dev/dri` enables access to render devices.
