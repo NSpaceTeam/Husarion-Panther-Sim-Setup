@@ -75,6 +75,11 @@ Once the container is running, you'll be at a bash prompt inside the Docker envi
 
 You can now run ROS 2 commands:
 
+*   **Launch Gazebo Simulation and Rviz2 with alias:**
+*   ```bash
+    run_sim
+    ```
+
 *   **Launch Gazebo Simulation:**
     ```bash
     ros2 launch husarion_ugv_gazebo core_gazebo.launch.py
