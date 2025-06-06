@@ -39,74 +39,35 @@ Before you begin, ensure you have the following installed on your **host Linux s
     ```
     This script will:
     *   Build the Docker image (default name: `my-husarion-app:jazzy`). You can change this in the script.
-    *   Add aliases to your `$HOME/.bashrc` file for running the container with different GPU options.
+    *   Add/Update aliases to your `$HOME/.bashrc` file for running the container with different GPU options.
 
 4.  **Source `.bashrc`:**
     For the new aliases to take effect in your current terminal session, source your `.bashrc` file or open a new terminal:
     ```bash
     source ~/.bashrc
     ```
-
-5.  **Allow X Server Connections (for GUI applications):**
-    To enable Docker containers to display GUIs (like Gazebo or Rviz) on your host's screen, run the following command in your host terminal. This is typically needed once per X server session (e.g., after a reboot).
-    ```bash
-    xhost +local:docker
-    ```
-    *Note: `xhost +local:docker` is convenient for local development but reduces X server security by allowing any local user to connect. For more secure environments, explore other X11 forwarding methods.*
+    *The `xhost +local:docker` command (to allow GUI applications from Docker to display) will now be executed automatically each time you use one of the `run_husarion_*` aliases.*
 
 ## Running the Docker Container
 
-After setup, you can use the following aliases to run the container:
+After setup, you can use the following aliases to run the container. Each alias will automatically attempt to authorize Docker to access your X display by running `xhost +local:docker` before starting the container.
 
 *   **No Dedicated GPU Acceleration:**
-    Uses software rendering (LLVMpipe) inside the container. Suitable if you don't have a compatible GPU or don't need high graphics performance.
     ```bash
     run_husarion_nogpu
     ```
-    This alias expands to (approximately):
-    ```bash
-    docker run -it --rm \
-        --cpus="4" -m "8g" \
-        --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" \
-        --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-        --name husarion_nogpu \
-        my-husarion-app:jazzy bash
-    ```
 
 *   **NVIDIA GPU Acceleration:**
-    Requires NVIDIA drivers and NVIDIA Container Toolkit on the host.
     ```bash
     run_husarion_nvidia
     ```
-    This alias expands to (approximately):
-    ```bash
-    docker run -it --rm \
-        --cpus="4" -m "8g" \
-        --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" \
-        --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-        --gpus all \
-        --name husarion_nvidia \
-        my-husarion-app:jazzy bash
-    ```
 
 *   **AMD GPU Acceleration:**
-    Requires appropriate Mesa drivers on the host.
     ```bash
     run_husarion_amd
     ```
-    This alias expands to (approximately, group ID might vary):
-    ```bash
-    docker run -it --rm \
-        --cpus="4" -m "8g" \
-        --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" \
-        --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-        --device=/dev/dri:/dev/dri \
-        --group-add=$(getent group video | cut -d: -f3 || getent group render | cut -d: -f3) \
-        --name husarion_amd \
-        my-husarion-app:jazzy bash
-    ```
 
-    *(The `--cpus` and `-m` values are defaults set in `setup_docker.sh` and can be modified there or by editing the aliases in your `.bashrc` directly.)*
+    *(The actual commands executed by these aliases now include `xhost +local:docker &&` at the beginning.)*
 
 ## Inside the Container
 
@@ -131,9 +92,53 @@ You can now run ROS 2 commands:
     ros2 launch husarion_ugv_viz view_robot.launch.py
     ```
 
+## Using in a Collaborative Environment
+
+Docker is excellent for ensuring consistent development and runtime environments across a team. Here's how to leverage this setup collaboratively:
+
+1.  **Version Control for Docker Setup:**
+    *   **Commit all setup files:** The `Dockerfile`, `entrypoint.sh`, and `setup_docker.sh` should be committed to a Git repository (e.g., your main project repository).
+    *   This allows every team member to clone the repository and have the exact same instructions for building the Docker image.
+
+2.  **Building the Image Locally (Recommended for Development):**
+    *   Each team member clones the repository.
+    *   Each team member runs the `./setup_docker.sh` script on their own machine.
+        *   This ensures the image is built using the latest committed `Dockerfile`.
+        *   It also sets up the convenient run aliases locally for them.
+    *   **Consistency:** As long as everyone builds from the same committed `Dockerfile`, their environments will be consistent.
+
+3.  **Sharing Pre-built Images (Optional, for CI/CD or specific deployments):**
+    *   You can push the built Docker image to a container registry like Docker Hub, GitHub Container Registry (GHCR), GitLab Container Registry, or a private registry.
+    *   **Tagging:** Use meaningful tags for your images (e.g., `yourteam/my-husarion-app:jazzy-v1.0`, `yourteam/my-husarion-app:jazzy-latest`).
+    *   **Pulling:** Team members can then pull the pre-built image instead of building it locally:
+        ```bash
+        docker pull yourregistry/yourimage:tag
+        ```
+    *   **Updating Aliases:** If using pre-built images, the `IMAGE_NAME` in `setup_docker.sh` (or directly in `.bashrc` aliases) would need to point to the registry image (e.g., `yourregistry/yourimage:tag`). The build step in `setup_docker.sh` could be skipped or made conditional.
+    *   **Pros:** Saves build time for each user, ensures bit-for-bit identical images.
+    *   **Cons:** Requires registry setup and management; `Dockerfile` changes need a new image to be built and pushed.
+
+4.  **Host Environment Still Matters (GPU, X11):**
+    *   While the Docker container provides a consistent *software* environment, team members will still need to correctly configure their *host machines* for Docker, especially for GUI and GPU access.
+    *   This includes:
+        *   Installing Docker.
+        *   Installing appropriate GPU drivers (NVIDIA/AMD).
+        *   Installing the NVIDIA Container Toolkit (for NVIDIA users).
+        *   Using `xhost +local:docker` or a similar mechanism for X11 forwarding (the aliases help automate this part).
+    *   The provided run aliases (`run_husarion_nvidia`, `run_husarion_amd`) help abstract some of these host-specific Docker run commands, but the underlying host setup must be correct.
+
+5.  **Communication and Updates:**
+    *   When the `Dockerfile` is updated (e.g., new dependencies added), communicate this to the team.
+    *   Team members will need to:
+        *   Pull the latest changes from Git.
+        *   Re-run `./setup_docker.sh` to rebuild the image with the new `Dockerfile` and update aliases.
+        *   Or, if using a registry, pull the newly pushed image version.
+
+By following these practices, your team can significantly benefit from the consistency and portability offered by Docker, leading to fewer "it works on my machine" issues.
+
 ## Troubleshooting GPU Access
 
-*   **General:** Ensure `xhost +local:docker` has been run on the host.
+*   **General:** The `xhost +local:docker` command is now part of the aliases. If GUIs still don't appear, ensure your X server is running and `DISPLAY` environment variable is correctly set on the host.
 *   **NVIDIA:**
     *   Verify `nvidia-smi` works on the host.
     *   Ensure NVIDIA Container Toolkit is correctly installed.
@@ -148,5 +153,3 @@ You can now run ROS 2 commands:
 
 *   **Image Name & Resource Limits:** You can change the `IMAGE_NAME`, `CPU_LIMIT`, and `MEMORY_LIMIT` variables at the top of `setup_docker.sh` before running it.
 *   **Aliases:** After running the setup script, you can manually edit the aliases in your `~/.bashrc` file if you need further customization.
-
-This comprehensive setup should make it much easier to manage and run your Husarion Docker environment!
