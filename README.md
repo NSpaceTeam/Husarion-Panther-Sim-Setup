@@ -112,6 +112,63 @@ sudo docker run --rm --gpus all nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
 
 If you get the same table with information about your graphics card as a result, **you have successfully configured everything needed!** Your Docker is now ready to work with GPU.
 
+---
+
+###  Checking the renderer:
+```bash
+sudo apt install -y mesa-utils
+glxinfo | grep "OpenGL renderer"
+```
+> If the output shows: `llvmpipe`, the system is using software rendering → this is not good!
+
+---
+
+###  Setting up Nvidia as primary:
+```bash
+sudo apt install nvidia-prime
+sudo prime-select query
+sudo prime-select nvidia
+sudo reboot
+```
+Check again:
+```bash
+glxinfo | grep "OpenGL renderer"
+```
+
+---
+
+##  Testing Nvidia in Docker:
+```bash
+docker run --rm --gpus all nvidia/cuda:12.2.0-base-ubuntu20.04 nvidia-smi
+```
+Then:
+```bash
+docker images
+```
+The list should contain an image that includes `nvidia/cuda`.
+
+---
+
+## 🚀 Running ROS 2 simulation with Nvidia GPU:
+Find and replace the original `docker run` command in script setup.sh with the following:
+```bash
+docker run -it \
+  --gpus all \
+  --name my_panther_sim \
+  --env="DISPLAY" \
+  --env="QT_X11_NO_MITSHM=1" \
+  --env="NVIDIA_DRIVER_CAPABILITIES=all" \
+  --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+  --network host \
+  --memory=10g \
+  --cpus=6 \
+  --device /dev/dri \
+  --privileged \
+```
+> `--gpus all` enables access to all GPU resources.
+> `--device /dev/dri` enables access to render devices.
+> `--memory` and `--cpus` adjust according to your computer.
+
 ## Files
 
 *   `Dockerfile`: Defines the Docker image, installing ROS 2 Jazzy, `husarion_ugv_ros`, and its dependencies.
