@@ -149,26 +149,6 @@ The list should contain an image that includes `nvidia/cuda`.
 
 ---
 
-## 🚀 Running ROS 2 simulation with Nvidia GPU:
-Find and replace the original `BASE_DOCKER_RUN_OPTIONS=...` command in script setup.sh with the following:
-```bash
-BASE_DOCKER_RUN_OPTIONS="-it \
-  --gpus all \
-  --name my_panther_sim \
-  --env=\"DISPLAY\" \
-  --env=\"QT_X11_NO_MITSHM=1\" \
-  --env=\"NVIDIA_DRIVER_CAPABILITIES=all\" \
-  --volume=\"/tmp/.X11-unix:/tmp/.X11-unix:rw\" \
-  --network host \
-  --memory=\"${MEMORY_LIMIT}\" \
-  --cpus=\"${CPU_LIMIT}\" \
-  --device /dev/dri \
-  --privileged"
-```
-> `--gpus all` enables access to all GPU resources.
-> `--device /dev/dri` enables access to render devices.
-> `--memory` and `--cpus` adjust according to your computer.
-
 ## Files
 
 *   `Dockerfile`: Defines the Docker image, installing ROS 2 Jazzy, `husarion_ugv_ros`, and its dependencies.
@@ -201,6 +181,30 @@ BASE_DOCKER_RUN_OPTIONS="-it \
     source ~/.bashrc
     ```
     *The `xhost +local:docker` command (to allow GUI applications from Docker to display) will now be executed automatically each time you use one of the `run_husarion_*` aliases.*
+
+---
+
+##  Running ROS 2 simulation with Nvidia GPU:
+Find and replace the original `BASE_DOCKER_RUN_OPTIONS=...` command in script setup.sh with the following:
+```bash
+BASE_DOCKER_RUN_OPTIONS="-it \
+  --gpus all \
+  --name my_panther_sim \
+  --env=\"DISPLAY\" \
+  --env=\"QT_X11_NO_MITSHM=1\" \
+  --env=\"NVIDIA_DRIVER_CAPABILITIES=all\" \
+  --volume=\"/tmp/.X11-unix:/tmp/.X11-unix:rw\" \
+  --network host \
+  --memory=\"${MEMORY_LIMIT}\" \
+  --cpus=\"${CPU_LIMIT}\" \
+  --device /dev/dri \
+  --privileged"
+```
+> `--gpus all` enables access to all GPU resources.
+> `--device /dev/dri` enables access to render devices.
+> `--memory` and `--cpus` adjust according to your computer.
+
+---
 
 ## Running the Docker Container
 
