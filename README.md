@@ -15,7 +15,102 @@ Before you begin, ensure you have the following installed on your **host Linux s
     *   Up-to-date Mesa drivers for your AMD GPU/APU.
 5.  **X11 Server:** Standard on most Linux desktop environments.
 
-If you do not know do you have NVIDIA drivers or NVIDIA Container Toolkit you can check and install it all using the guide from the following link: https://gist.github.com/Konstantin036/6f83cffb3675e014bff94885a8e6a225 
+If you allready have NVIDIA drivers and NVIDIA Container Toolkit you can skip this step and if you are not sure, you can check and install it all using the following guide:
+
+# Guide: NVIDIA Drivers and Container Toolkit for Docker on Linux
+
+To enable Docker containers to access and use your NVIDIA graphics card (GPU), you need to have properly installed NVIDIA drivers on your system, as well as the NVIDIA Container Toolkit.
+
+This guide will walk you through the entire process, step by step. The commands are primarily for Ubuntu/Debian-based distributions.
+
+---
+
+### Part 1: Checking and Installing NVIDIA Drivers
+
+First, we need to make sure that the appropriate NVIDIA drivers are installed on your host system.
+
+#### Step 1.1: Checking existing drivers
+
+The easiest way to check if drivers are installed and active is using the `nvidia-smi` command. Open a terminal and type:
+
+```bash
+nvidia-smi
+```
+
+- **If you get a table** with information about your graphics card, driver version, and CUDA version, this means the drivers are **successfully installed** and you can skip to **Part 2**.
+- **If you get an error** like `command not found` or some other error, this means the drivers are not installed or not properly configured. Continue to the next step.
+
+#### Step 1.2: Installing NVIDIA drivers (if needed)
+
+On Ubuntu and similar distributions, the safest way to install is by using a tool that automatically finds recommended drivers.
+
+Open a terminal and run the following command:
+
+```bash
+sudo ubuntu-drivers autoinstall
+```
+
+This command will automatically detect your graphics card and install the best driver version for it.
+
+After the installation is complete, **make sure to restart your computer**:
+
+```bash
+sudo reboot
+```
+
+When the system boots up, run the `nvidia-smi` command again to confirm that everything was successfully installed.
+
+---
+
+### Part 2: Checking and Installing NVIDIA Container Toolkit
+
+This tool allows Docker to "see" and use GPU drivers from your host system.
+
+#### Step 2.1: Installing NVIDIA Container Toolkit
+
+First, you need to configure the NVIDIA repository. Copy and execute the following commands one by one:
+
+1. **Set up the GPG key:**
+   ```bash
+   curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
+   ```
+
+2. **Add the repository to the sources list:**
+   ```bash
+   curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
+   sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+   sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+   ```
+
+3. **Update the package list and install the toolkit:**
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y nvidia-container-toolkit
+   ```
+
+#### Step 2.2: Configure Docker to use NVIDIA runtime
+
+Now you need to tell Docker to use the newly installed NVIDIA runtime.
+
+```bash
+sudo nvidia-ctk runtime configure --runtime=docker
+```
+
+After that, **restart the Docker daemon** for the changes to take effect:
+
+```bash
+sudo systemctl restart docker
+```
+
+#### Step 2.3: Final verification
+
+Everything is ready! To finally test whether a Docker container can access your graphics card, run the following command:
+
+```bash
+sudo docker run --rm --gpus all nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
+```
+
+If you get the same table with information about your graphics card as a result, **you have successfully configured everything needed!** Your Docker is now ready to work with GPU.
 
 ## Files
 
